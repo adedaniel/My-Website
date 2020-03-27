@@ -14,7 +14,7 @@ module.exports = {
     youtube: "https://www.youtube.com/channel/UCRCo2e9bgFG59L3ogKZnQEg",
   },
   // googleAnalyticsID: "UA-88875900-4",
-  themeColor: "#cde1f8",
+  themeColor: "#61dafb",
   backgroundColor: "#10161b",
   social: {
     facebook: "daniel.adetola.3",

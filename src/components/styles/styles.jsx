@@ -4,8 +4,9 @@ export const colors = {
   primary: config.themeColor,
   lightPrimary: "#FCF6EF",
   secondary: config.backgroundColor,
-  offWhite: "#f9f9f9",
+  offWhite: "#fbfbfb",
   white: "#ffffff",
   dark: "#000000",
+  darkGrey: "#505050",
   transparent: "transparent",
 }
