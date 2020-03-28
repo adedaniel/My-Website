@@ -17,6 +17,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {

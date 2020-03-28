@@ -2,11 +2,13 @@ const config = require("../../data/config")
 
 export const colors = {
   primary: config.themeColor,
-  lightPrimary: "#FCF6EF",
+  // lightPrimary: "#FCF6EF",
   secondary: config.backgroundColor,
-  offWhite: "#fbfbfb",
+  primaryGrey: "#fbfbfb",
+  secondaryGrey: "#263542",
   white: "#ffffff",
   dark: "#000000",
-  darkGrey: "#505050",
+  darkTextGrey: "#505050",
+  lightTextGrey: "#f1f1f1",
   transparent: "transparent",
 }

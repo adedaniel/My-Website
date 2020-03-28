@@ -1,10 +1,25 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useLayoutEffect } from "react"
 import { colors } from "./styles/styles"
 import LogoImage from "./ImageExports/LogoImage"
 
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0])
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight])
+    }
+    window.addEventListener("resize", updateSize)
+    updateSize()
+    return () => window.removeEventListener("resize", updateSize)
+  }, [])
+  return size
+}
 function Header({ siteTitle }) {
+  const [width, height] = useWindowSize()
+  const [dark, setDark] = useState(true)
   const [active, setActive] = useState(1)
   const [topClass, setTopClass] = useState("")
 
@@ -17,12 +32,19 @@ function Header({ siteTitle }) {
       setTopClass(activeClass)
     })
   }, [])
+  useEffect(() => {
+    console.log(width)
+  })
+
+  const setToggle = (theme, toggleTheme) => {
+    theme === "light" ? toggleTheme("dark") : toggleTheme("light")
+  }
   return (
     <>
       <div className="navbar">
         {
           <nav
-            className={`navbar navbar-expand-md ${topClass} effect-main navbar-light bg-white fixed-top`}
+            className={`navbar navbar-expand-md ${topClass} effect-main tm-1 navbar-light bgColor fixed-top`}
           >
             <div className="container container-s menu-wrap">
               <a className="navbar-brand" href="#">
@@ -148,12 +170,31 @@ function Header({ siteTitle }) {
                       <hr />
                       <h5 className="textGrey">
                         Theme &nbsp;&nbsp;
-                        <button className="darkModeToggler">
-                          <i
-                            className="fa fa-sun-o textGrey"
-                            aria-hidden="true"
-                          ></i>
-                        </button>
+                        <ThemeToggler>
+                          {({ theme, toggleTheme }) => (
+                            // <input
+                            //   type="checkbox"
+                            //   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                            //   checked={theme === 'dark'}
+                            // />
+                            <button
+                              className="darkModeToggler bgColor"
+                              onClick={() => setToggle(theme, toggleTheme)}
+                            >
+                              {theme === "light" ? (
+                                <i
+                                  className="fa fa-sun-o textGrey"
+                                  aria-hidden="true"
+                                ></i>
+                              ) : (
+                                <i
+                                  className="fa fa-moon-o text-white"
+                                  aria-hidden="true"
+                                ></i>
+                              )}
+                            </button>
+                          )}
+                        </ThemeToggler>
                       </h5>
                     </ul>
                   </div>
@@ -166,7 +207,7 @@ function Header({ siteTitle }) {
 
       <div className="vh-100 sidebar bgPrimary">
         <LogoImage />
-        <h6 className="my-4 textDarkGrey">
+        <h6 className="my-4 textdarkTextGrey">
           Web Developer <br /> UI/UX Designer <br />
           Engineering Student <br />
         </h6>
@@ -243,24 +284,60 @@ function Header({ siteTitle }) {
             </a>
           </li>
           <hr />
+          <h5 className="textGrey">
+            Theme &nbsp;&nbsp;
+            {width >= 992 ? (
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  // <input
+                  //   type="checkbox"
+                  //   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                  //   checked={theme === 'dark'}
+                  // />
+                  <button
+                    className="darkModeToggler bgColor"
+                    onClick={() => setToggle(theme, toggleTheme)}
+                  >
+                    {theme === "light" ? (
+                      <i
+                        className="fa fa-sun-o textGrey"
+                        aria-hidden="true"
+                      ></i>
+                    ) : (
+                      <i
+                        className="fa fa-moon-o text-white"
+                        aria-hidden="true"
+                      ></i>
+                    )}
+                  </button>
+                )}
+              </ThemeToggler>
+            ) : (
+              ""
+            )}
+          </h5>
         </ul>
 
-        <p className="textDarkGrey">
+        <p className="textdarkTextGrey">
           For business or casual chatter, email me at
           adetoladaniel693@gmail.com.
         </p>
       </div>
       <style jsx>
         {`
+          .bgColor {
+            background-color: var(--bg);
+          }
           .textGrey {
-            color: ${colors.darkGrey};
+            color: var(--greyText);
           }
           .darkModeToggler {
-            box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1),
-              0 1px 6px rgba(0, 0, 0, 0.1);
-            background-color: transparent;
+            box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3),
+              0 1px 6px rgba(0, 0, 0, 0.3);
             padding: 5px 17px;
             border: none;
+            outline: 0 !important;
+            border-radius: 16px;
           }
 
           .menu-wrap .toggler {
@@ -294,7 +371,7 @@ function Header({ siteTitle }) {
             flex: none;
             width: 100%;
             height: 2px;
-            background: ${colors.darkGrey};
+            background: var(--greyText);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -364,7 +441,7 @@ function Header({ siteTitle }) {
           }
 
           .menu-wrap .menu > div {
-            background: ${colors.offWhite};
+            background: var(--bgGrey);
             border-radius: 50%;
             width: 292vw;
             height: 292vw;
@@ -388,7 +465,7 @@ function Header({ siteTitle }) {
           .menu-wrap .menu > div > div > ul > li {
             margin: 0 auto;
             list-style: none;
-            color: ${colors.darkGrey};
+            color: var(--greyText);
             font-size: 1.5rem;
             padding: 10px 0;
           }
@@ -401,8 +478,8 @@ function Header({ siteTitle }) {
           .textPrimary {
             color: ${colors.primary};
           }
-          .textDarkGrey {
-            color: ${colors.darkGrey};
+          .textdarkTextGrey {
+            color: var(--greyText);
           }
           .sidebar {
             width: 265px;
@@ -413,7 +490,7 @@ function Header({ siteTitle }) {
             border-right-style: solid;
           }
           .bgPrimary {
-            background-color: #fbfbfb;
+            background-color: var(--bgGrey);
           }
           .sidebarList {
             width: fit-content;
@@ -426,7 +503,7 @@ function Header({ siteTitle }) {
           }
           .sidebarList a {
             text-decoration: none;
-            color: ${colors.darkGrey};
+            color: var(--greyText);
           }
           .sidebarList a h5 {
             margin: 0;
@@ -439,7 +516,7 @@ function Header({ siteTitle }) {
             display: block; /* This will put the pseudo element on its own line. */
             width: 0%; /* Change this to whatever width you want. */
             padding-top: 0px; /* This creates some space between the element and the border. */
-            border-bottom: 2px solid ${colors.darkGrey}; /* This creates the border. Replace black with whatever color you want. */
+            border-bottom: 2px solid var(--greyText); /* This creates the border. Replace black with whatever color you want. */
             transition: all 0.7s;
           }
           .sidebarList.active a {
@@ -478,32 +555,21 @@ function Header({ siteTitle }) {
           .navbar.past-main {
             padding-top: 15px;
             padding-bottom: 15px;
-            background-color: rgba(255, 255, 255, 0.99) !important;
-            -webkit-box-shadow: 0 2px 3px 0 rgba(96, 96, 96, 0.1);
-            -moz-box-shadow: 0 2px 3px 0 rgba(96, 96, 96, 0.1);
-            box-shadow: 0 2px 3px 0 rgba(96, 96, 96, 0.1);
+            /*background-color: rgba(255, 255, 255, 0.99) !important;*/
+            -webkit-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.3);
+            -moz-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.3);
+            box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.3);
           }
-
+          .tm-1 {
+            margin-top: -1px;
+          }
           .navbar.effect-main {
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
           }
 
-          .navbar.past-main .navbar-brand {
-            color: #6d48e5 !important;
-          }
-
-          .nav-white.past-main .nav-item .nav-link {
-            color: #364655;
-            font-weight: 500;
-          }
-
           .navbar.past-main .nav-item .nav-link {
             font-weight: 500;
-          }
-
-          .nav-white.past-main .navbar-brand {
-            color: #364655;
           }
 
           .nav-white.effect-main {
