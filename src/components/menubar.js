@@ -17,7 +17,7 @@ function useWindowSize() {
   }, [])
   return size
 }
-function Header({ siteTitle }) {
+function Header() {
   const [width, height] = useWindowSize()
   const [dark, setDark] = useState(true)
   const [active, setActive] = useState(1)
@@ -32,9 +32,6 @@ function Header({ siteTitle }) {
       setTopClass(activeClass)
     })
   }, [])
-  useEffect(() => {
-    console.log(width)
-  })
 
   const setToggle = (theme, toggleTheme) => {
     theme === "light" ? toggleTheme("dark") : toggleTheme("light")
@@ -337,7 +334,7 @@ function Header({ siteTitle }) {
             padding: 5px 17px;
             border: none;
             outline: 0 !important;
-            border-radius: 16px;
+            border-radius: 40px;
           }
 
           .menu-wrap .toggler {
@@ -486,7 +483,7 @@ function Header({ siteTitle }) {
             padding: 35px 30px;
             position: fixed;
             border-right-width: 1px;
-            border-right-color: lightgrey;
+            border-right-color: var(--lineGrey);
             border-right-style: solid;
           }
           .bgPrimary {

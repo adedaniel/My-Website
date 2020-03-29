@@ -12,6 +12,7 @@ module.exports = {
     linkedin: "https://www.linkedin.com/in/daniel-adetola-700baa199/",
     instagram: "https://instagram.com/king_dannyel",
     youtube: "https://www.youtube.com/channel/UCRCo2e9bgFG59L3ogKZnQEg",
+    facebook: "https://www.facebook.com/daniel.adetola.3",
   },
   // googleAnalyticsID: "UA-88875900-4",
   themeColor: "#61dafb",

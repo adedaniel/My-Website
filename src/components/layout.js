@@ -13,19 +13,9 @@ import Menubar from "./menubar"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Menubar siteTitle={data.site.siteMetadata.title} />
+      <Menubar />
       <div className="content">
         <main>{children}</main>
         {
@@ -39,7 +29,7 @@ const Layout = ({ children }) => {
       <style jsx>{`
         @media (max-width: 991px) {
           .content {
-            margin-top: 50px;
+            margin-top: 33px;
           }
         }
         @media (min-width: 992px) {
@@ -58,6 +48,9 @@ const Layout = ({ children }) => {
           --neutral: ${colors.white};
           --greyText: ${colors.darkTextGrey};
           --bgGrey: ${colors.primaryGrey};
+          --inverseNeutral: ${colors.dark};
+
+          --lineGrey: lightgrey;
           --textTitle: #222;
           --textLink: blue;
           --hr: hsla(0, 0%, 0%, 0.2);
@@ -68,9 +61,11 @@ const Layout = ({ children }) => {
           -webkit-font-smoothing: antialiased;
           --primary: ${colors.primary};
           --neutral: ${colors.dark};
+          --inverseNeutral: ${colors.white};
           --bg: ${colors.secondary};
           --greyText: ${colors.lightTextGrey};
           --bgGrey: ${colors.secondaryGrey};
+          --lineGrey: ${colors.secondaryGrey};
           --textNormal: rgba(255, 255, 255, 0.88);
           --textTitle: white;
           --textLink: yellow;
