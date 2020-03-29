@@ -4,7 +4,7 @@ module.exports = {
   icon: "../images/adedaniel's icon.png",
   author: "adedaniel",
   url: "https://adedaniel.com",
-  legalName: "adedaniel",
+  legalName: "Adetola Daniel",
   defaultDescription: "Daniel's developer website",
   socialLinks: {
     twitter: "http://www.twitter.com/ijebu_developer",
