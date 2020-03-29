@@ -5,7 +5,7 @@ export const colors = {
   // lightPrimary: "#FCF6EF",
   secondary: config.backgroundColor,
   primaryGrey: "#fbfbfb",
-  secondaryGrey: "#263542",
+  secondaryGrey: "#1c252d",
   white: "#ffffff",
   dark: "#000000",
   darkTextGrey: "#505050",

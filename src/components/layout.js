@@ -49,6 +49,7 @@ const Layout = ({ children }) => {
           --greyText: ${colors.darkTextGrey};
           --bgGrey: ${colors.primaryGrey};
           --inverseNeutral: ${colors.dark};
+          --scrollHover: #a5a5a5;
 
           --lineGrey: lightgrey;
           --textTitle: #222;
@@ -65,11 +66,32 @@ const Layout = ({ children }) => {
           --bg: ${colors.secondary};
           --greyText: ${colors.lightTextGrey};
           --bgGrey: ${colors.secondaryGrey};
-          --lineGrey: ${colors.secondaryGrey};
+          --lineGrey: #5a5a5a;
+          --scrollHover: #d0d0d0;
           --textNormal: rgba(255, 255, 255, 0.88);
           --textTitle: white;
           --textLink: yellow;
           --hr: hsla(0, 0%, 100%, 0.2);
+        }
+
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: var(--bgGrey);
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: var(--greyText);
+          border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: var(--scrollHover);
         }
       `}</style>
     </>

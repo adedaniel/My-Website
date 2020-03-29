@@ -91,6 +91,21 @@ function Header() {
                       </li>
                       <li
                         className={`sidebarList ${
+                          active === 4 ? "active" : "inactive"
+                        }`}
+                        onClick={() => {
+                          setActive(4)
+                          document.getElementById("toggler").checked = false
+                        }}
+                      >
+                        <a href="#">
+                          <h5>
+                            <strong>SERVICES</strong>
+                          </h5>
+                        </a>
+                      </li>
+                      <li
+                        className={`sidebarList ${
                           active === 3 ? "active" : "inactive"
                         }`}
                         onClick={() => {
@@ -104,18 +119,19 @@ function Header() {
                           </h5>
                         </a>
                       </li>
+
                       <li
                         className={`sidebarList ${
-                          active === 4 ? "active" : "inactive"
+                          active === 6 ? "active" : "inactive"
                         }`}
                         onClick={() => {
-                          setActive(4)
+                          setActive(6)
                           document.getElementById("toggler").checked = false
                         }}
                       >
                         <a href="#">
                           <h5>
-                            <strong>EXPERIENCE</strong>
+                            <strong>PORTFOLIO</strong>
                           </h5>
                         </a>
                       </li>
@@ -136,21 +152,6 @@ function Header() {
                       </li>
                       <li
                         className={`sidebarList ${
-                          active === 6 ? "active" : "inactive"
-                        }`}
-                        onClick={() => {
-                          setActive(6)
-                          document.getElementById("toggler").checked = false
-                        }}
-                      >
-                        <a href="#">
-                          <h5>
-                            <strong>PORTFOLIO</strong>
-                          </h5>
-                        </a>
-                      </li>
-                      <li
-                        className={`sidebarList ${
                           active === 7 ? "active" : "inactive"
                         }`}
                         onClick={() => {
@@ -164,7 +165,7 @@ function Header() {
                           </h5>
                         </a>
                       </li>
-                      <hr />
+                      <hr className="lineGrey" />
                       <h5 className="textGrey">
                         Theme &nbsp;&nbsp;
                         <ThemeToggler>
@@ -208,14 +209,14 @@ function Header() {
           Web Developer <br /> UI/UX Designer <br />
           Engineering Student <br />
         </h6>
-        <hr />
+        <hr className="lineGrey" />
         <ul className="p-0 mb-4">
           <li
             className={`sidebarList ${active === 1 ? "active" : "inactive"}`}
             onClick={() => setActive(1)}
           >
             <a href="#">
-              <h5 className="">
+              <h5 className="#start">
                 <strong>HOME</strong>
               </h5>
             </a>
@@ -224,19 +225,9 @@ function Header() {
             className={`sidebarList ${active === 2 ? "active" : "inactive"}`}
             onClick={() => setActive(2)}
           >
-            <a href="#">
+            <a href="#me">
               <h5>
                 <strong>ABOUT</strong>
-              </h5>
-            </a>
-          </li>
-          <li
-            className={`sidebarList ${active === 3 ? "active" : "inactive"}`}
-            onClick={() => setActive(3)}
-          >
-            <a href="#">
-              <h5>
-                <strong>TECHNOLOGIES</strong>
               </h5>
             </a>
           </li>
@@ -244,9 +235,30 @@ function Header() {
             className={`sidebarList ${active === 4 ? "active" : "inactive"}`}
             onClick={() => setActive(4)}
           >
-            <a href="#">
+            <a href="#abilities">
               <h5>
-                <strong>EXPERIENCE</strong>
+                <strong>SERVICES</strong>
+              </h5>
+            </a>
+          </li>
+          <li
+            className={`sidebarList ${active === 3 ? "active" : "inactive"}`}
+            onClick={() => setActive(3)}
+          >
+            <a href="#tools">
+              <h5>
+                <strong>TECHNOLOGIES</strong>
+              </h5>
+            </a>
+          </li>
+
+          <li
+            className={`sidebarList ${active === 6 ? "active" : "inactive"}`}
+            onClick={() => setActive(6)}
+          >
+            <a href="#works">
+              <h5>
+                <strong>PORTFOLIO</strong>
               </h5>
             </a>
           </li>
@@ -254,19 +266,9 @@ function Header() {
             className={`sidebarList ${active === 5 ? "active" : "inactive"}`}
             onClick={() => setActive(5)}
           >
-            <a href="#">
+            <a href="#partners">
               <h5>
                 <strong>CLIENTS</strong>
-              </h5>
-            </a>
-          </li>
-          <li
-            className={`sidebarList ${active === 6 ? "active" : "inactive"}`}
-            onClick={() => setActive(6)}
-          >
-            <a href="#">
-              <h5>
-                <strong>PORTFOLIO</strong>
               </h5>
             </a>
           </li>
@@ -274,13 +276,13 @@ function Header() {
             className={`sidebarList ${active === 7 ? "active" : "inactive"}`}
             onClick={() => setActive(7)}
           >
-            <a href="#">
+            <a href="#get-in-touch">
               <h5>
                 <strong>CONTACT</strong>
               </h5>
             </a>
           </li>
-          <hr />
+          <hr className="lineGrey" />
           <h5 className="textGrey">
             Theme &nbsp;&nbsp;
             {width >= 992 ? (
@@ -477,6 +479,9 @@ function Header() {
           }
           .textdarkTextGrey {
             color: var(--greyText);
+          }
+          .lineGrey {
+            background-color: var(--lineGrey);
           }
           .sidebar {
             width: 265px;
