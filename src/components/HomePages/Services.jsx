@@ -1,34 +1,38 @@
 import React from "react"
+import DevelopmentImage from "../ImageExports/DevelopmentImage"
+import UpdateImage from "../ImageExports/UpdateImage"
+import UIImage from "../ImageExports/UIImage"
+import FastImage from "../ImageExports/FastImage"
 
 export default function Services() {
   return (
-    <div>
-      <div className=" w-100 bgColor pt-5">
+    <div className="bgColor">
+      <div className=" w-100 container  py-5">
         <div className="text-center" id="abilities">
           <h1 className="mb-1 bgGrey">Services</h1>
           <div className="lineWrapper">
             <div className="innerLine"></div>
           </div>
-          <br />
 
-          <div className="main-timeline">
+          <div className="main-timeline respMargin">
             <div className="timeline">
               <div className="icon"></div>
               <div className="date-content">
                 <div className="date-outer">
                   <span className="date">
-                    <span className="month">2 Years</span>
-                    <span className="year">2013</span>
+                    <div className="iconWrapper">
+                      <DevelopmentImage />
+                    </div>
                   </span>
                 </div>
               </div>
               <div className="timeline-content">
                 <h5 className="title">Web Development</h5>
                 <p className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  efficitur ex sit amet massa scelerisque scelerisque. Aliquam
-                  erat volutpat. Aenean interdum finibus efficitur. Praesent
-                  dapibus dolor felis, eu ultrices elit molestie.
+                  I create fast, beautiful, cost-effective and efficient
+                  websites and web applications with perfect scores in
+                  Performance, Accessibility, SEO and Best Practices. All web
+                  apps are built with the latest and sophisticated technologies
                 </p>
               </div>
             </div>
@@ -38,18 +42,20 @@ export default function Services() {
               <div className="date-content">
                 <div className="date-outer">
                   <span className="date">
-                    <span className="month">1 Years</span>
-                    <span className="year">2015</span>
+                    <div className="iconWrapper">
+                      <UpdateImage />
+                    </div>
                   </span>
                 </div>
               </div>
               <div className="timeline-content">
-                <h5 className="title">Product Designer</h5>
+                <h5 className="title">State of the Art Solutions</h5>
                 <p className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  efficitur ex sit amet massa scelerisque scelerisque. Aliquam
-                  erat volutpat. Aenean interdum finibus efficitur. Praesent
-                  dapibus dolor felis, eu ultrices elit molestie.
+                  It's 2020 and you and your clients should see that in your
+                  final product. This involves best practices regarding
+                  performance, accessibility, security and usability. This
+                  results in appropriate design, secure websites and fast load
+                  times.
                 </p>
               </div>
             </div>
@@ -59,18 +65,19 @@ export default function Services() {
               <div className="date-content">
                 <div className="date-outer">
                   <span className="date">
-                    <span className="month">2 Years</span>
-                    <span className="year">2016</span>
+                    <div className="iconWrapper">
+                      <UIImage />
+                    </div>
                   </span>
                 </div>
               </div>
               <div className="timeline-content">
-                <h5 className="title">Web Designer</h5>
+                <h5 className="title">User Interface Design</h5>
                 <p className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  efficitur ex sit amet massa scelerisque scelerisque. Aliquam
-                  erat volutpat. Aenean interdum finibus efficitur. Praesent
-                  dapibus dolor felis, eu ultrices elit molestie.
+                  I have an eye for detail, passion for color theory &amp;
+                  psychology, enjoy playing with type and breaking the grid. I
+                  value simplicity and clarity so I design easy to use and
+                  engaging interfaces for desktop and mobile.
                 </p>
               </div>
             </div>
@@ -80,18 +87,19 @@ export default function Services() {
               <div className="date-content">
                 <div className="date-outer">
                   <span className="date">
-                    <span className="month">2 Years</span>
-                    <span className="year">2018</span>
+                    <div className="iconWrapper">
+                      <FastImage />
+                    </div>
                   </span>
                 </div>
               </div>
               <div className="timeline-content">
-                <h5 className="title">Graphic Designer</h5>
+                <h5 className="title">Speed</h5>
                 <p className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  efficitur ex sit amet massa scelerisque scelerisque. Aliquam
-                  erat volutpat. Aenean interdum finibus efficitur. Praesent
-                  dapibus dolor felis, eu ultrices elit molestie.
+                  You can be rest assured of Continuous Integration and Delivery
+                  at the fastest possible time frames without having to lose out
+                  on product quality. So you get what you want, how you want it,{" "}
+                  <strong>when you want it.</strong>
                 </p>
               </div>
             </div>
@@ -100,6 +108,10 @@ export default function Services() {
       </div>
       <style jsx>
         {`
+          .iconWrapper {
+            width: 60px;
+            margin: 0 auto;
+          }
           .bgColor {
             background-color: var(--bg);
           }
@@ -110,6 +122,7 @@ export default function Services() {
           }
           .main-timeline {
             position: relative;
+            color: var(--inverseNeutral);
           }
 
           .main-timeline:before {
@@ -222,8 +235,8 @@ export default function Services() {
           }
 
           .main-timeline .date-outer:before {
-            background: #fff;
-            border: 2px solid #232323;
+            background: var(--bg);
+            border: 2px solid var(--inverseGreyText);
             left: -6px;
           }
 
@@ -268,7 +281,7 @@ export default function Services() {
           }
 
           .main-timeline .title {
-            font-size: 19px;
+            font-size: 22px;
             font-weight: 700;
             line-height: 24px;
             margin: 0 0 15px 0;
@@ -301,15 +314,16 @@ export default function Services() {
             .main-timeline .timeline-content {
               padding: 10px 0 10px 30px;
             }
-            .main-timeline .title {
-              font-size: 17px;
-            }
+
             .main-timeline .timeline:nth-child(2n) .timeline-content {
               padding: 10px 30px 10px 0;
             }
           }
 
           @media only screen and (max-width: 767px) {
+            .respMargin {
+              margin-top: 30px;
+            }
             .main-timeline:before {
               margin: 0;
               left: 7px;

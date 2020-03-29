@@ -27,10 +27,10 @@ export default function About() {
 
                   <p className="pFont text-justify invNeutral">
                     <br />
-                    Hi, My name is Adetola Daniel. <br />
+                    Hi, my name is Adetola Daniel. <br />
                     <br />
                     I'm basically a really creative, fun and talented guy. I'm
-                    also an expert front-end web developer whose really good in
+                    also an expert front-end web developer who's really good in
                     React, Next, Gatsby and Vanilla JS as well. I've been coding
                     for about 4 years or so now.
                     <br />
@@ -90,7 +90,6 @@ export default function About() {
         }
         .pFont{
           font-size: 18px;
-          padding-right: 20px
         
         }
         @media(max-width: 767px){

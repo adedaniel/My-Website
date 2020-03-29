@@ -47,6 +47,7 @@ const Layout = ({ children }) => {
           --primary: ${colors.primary};
           --neutral: ${colors.white};
           --greyText: ${colors.darkTextGrey};
+          --inverseGreyText: ${colors.lightTextGrey};
           --bgGrey: ${colors.primaryGrey};
           --inverseNeutral: ${colors.dark};
           --scrollHover: #a5a5a5;
@@ -65,6 +66,7 @@ const Layout = ({ children }) => {
           --inverseNeutral: ${colors.white};
           --bg: ${colors.secondary};
           --greyText: ${colors.lightTextGrey};
+          --inverseGreyText: ${colors.darkTextGrey};
           --bgGrey: ${colors.secondaryGrey};
           --lineGrey: #5a5a5a;
           --scrollHover: #d0d0d0;
