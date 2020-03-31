@@ -3,6 +3,7 @@ import Intro from "./HomePages/Intro"
 import { useStaticQuery, graphql } from "gatsby"
 import About from "./HomePages/About"
 import Services from "./HomePages/Services"
+import Technologies from "./HomePages/Technologies"
 
 export default function HomePage() {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ export default function HomePage() {
       <Intro queryData={queryData} />
       <About />
       <Services />
+      <Technologies />
     </>
   )
 }

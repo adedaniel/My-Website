@@ -19,7 +19,6 @@ function useWindowSize() {
 }
 function Header() {
   const [width, height] = useWindowSize()
-  const [dark, setDark] = useState(true)
   const [active, setActive] = useState(1)
   const [topClass, setTopClass] = useState("")
 
@@ -62,7 +61,7 @@ function Header() {
                       <li
                         className={`sidebarList ${
                           active === 1 ? "active" : "inactive"
-                        }`}
+                          }`}
                         onClick={() => {
                           setActive(1)
                           document.getElementById("toggler").checked = false
@@ -77,7 +76,7 @@ function Header() {
                       <li
                         className={`sidebarList ${
                           active === 2 ? "active" : "inactive"
-                        }`}
+                          }`}
                         onClick={() => {
                           setActive(2)
                           document.getElementById("toggler").checked = false
@@ -92,7 +91,7 @@ function Header() {
                       <li
                         className={`sidebarList ${
                           active === 4 ? "active" : "inactive"
-                        }`}
+                          }`}
                         onClick={() => {
                           setActive(4)
                           document.getElementById("toggler").checked = false
@@ -107,7 +106,7 @@ function Header() {
                       <li
                         className={`sidebarList ${
                           active === 3 ? "active" : "inactive"
-                        }`}
+                          }`}
                         onClick={() => {
                           setActive(3)
                           document.getElementById("toggler").checked = false
@@ -123,7 +122,7 @@ function Header() {
                       <li
                         className={`sidebarList ${
                           active === 6 ? "active" : "inactive"
-                        }`}
+                          }`}
                         onClick={() => {
                           setActive(6)
                           document.getElementById("toggler").checked = false
@@ -138,7 +137,7 @@ function Header() {
                       <li
                         className={`sidebarList ${
                           active === 5 ? "active" : "inactive"
-                        }`}
+                          }`}
                         onClick={() => {
                           setActive(5)
                           document.getElementById("toggler").checked = false
@@ -153,7 +152,7 @@ function Header() {
                       <li
                         className={`sidebarList ${
                           active === 7 ? "active" : "inactive"
-                        }`}
+                          }`}
                         onClick={() => {
                           setActive(7)
                           document.getElementById("toggler").checked = false
@@ -185,11 +184,11 @@ function Header() {
                                   aria-hidden="true"
                                 ></i>
                               ) : (
-                                <i
-                                  className="fa fa-moon-o text-white"
-                                  aria-hidden="true"
-                                ></i>
-                              )}
+                                  <i
+                                    className="fa fa-moon-o text-white"
+                                    aria-hidden="true"
+                                  ></i>
+                                )}
                             </button>
                           )}
                         </ThemeToggler>
@@ -303,17 +302,17 @@ function Header() {
                         aria-hidden="true"
                       ></i>
                     ) : (
-                      <i
-                        className="fa fa-moon-o text-white"
-                        aria-hidden="true"
-                      ></i>
-                    )}
+                        <i
+                          className="fa fa-moon-o text-white"
+                          aria-hidden="true"
+                        ></i>
+                      )}
                   </button>
                 )}
               </ThemeToggler>
             ) : (
-              ""
-            )}
+                ""
+              )}
           </h5>
         </ul>
 
