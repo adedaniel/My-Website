@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import About from "./HomePages/About"
 import Services from "./HomePages/Services"
 import Technologies from "./HomePages/Technologies"
+import Portfolio from "./HomePages/Portfolio"
 
 export default function HomePage() {
   const data = useStaticQuery(graphql`
@@ -30,6 +31,7 @@ export default function HomePage() {
       <About />
       <Services />
       <Technologies />
+      <Portfolio />
     </>
   )
 }
