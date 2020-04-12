@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Adetola Daniel <adetoladaniel693@gmail.com>",
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.13.26",
     "animate.css": "^3.7.2",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
@@ -24,8 +25,11 @@
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-responsive-carousel": "^3.1.57",
+    "react-slick": "^0.25.2",
     "react-typed": "^1.2.0",
     "styled-jsx": "^3.2.5"
   },

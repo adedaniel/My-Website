@@ -51,12 +51,10 @@ const Layout = ({ children }) => {
           --bgGrey: ${colors.primaryGrey};
           --inverseNeutral: ${colors.dark};
           --scrollHover: #a5a5a5;
-
           --lineGrey: lightgrey;
           --textTitle: #222;
           --textLink: blue;
           --hr: hsla(0, 0%, 0%, 0.2);
-          transition: all 2s linear;
         }
 
         body.dark {

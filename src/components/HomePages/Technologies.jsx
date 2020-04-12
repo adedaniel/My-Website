@@ -1,22 +1,250 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { colors } from "../styles/styles"
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from 'react-responsive-carousel';
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 export default function Technologies() {
+  const data = useStaticQuery(graphql`
+  query {
+    JavascriptImages: allFile(filter: { relativeDirectory: { eq: "javascript" } }) {
+      nodes {
+        id
+        name
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid ##Adds blur-in Preloader
+          }
+          fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed_tracedSVG ##Adds B/W Preloader
+            }
+        }
+      }
+    }
+    CssImages: allFile(filter: { relativeDirectory: { eq: "css-frameworks" } }) {
+      nodes {
+        id
+        name
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid ##Adds blur-in Preloader
+          }
+          fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed_tracedSVG ##Adds B/W Preloader
+            }
+        }
+      }
+    }
+    DevHostingImages: allFile(filter: { relativeDirectory: { eq: "dev-hosting" } }) {
+      nodes {
+        id
+        name
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid ##Adds blur-in Preloader
+          }
+          fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed_tracedSVG ##Adds B/W Preloader
+            }
+        }
+      }
+    }
+    
+    TestingImages: allFile(filter: { relativeDirectory: { eq: "testing" } }) {
+      nodes {
+        id
+        name
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid ##Adds blur-in Preloader
+          }
+          fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed_tracedSVG ##Adds B/W Preloader
+            }
+        }
+      }
+    }
+
+  }
+`)
+
   return (
     <>
       <div className="pt-1 bgPrimaryGrey">
-        <div className="text-center mt-5" id="me">
+        <div className="text-center py-5" id="me">
           <h1 className="mb-1 bgGrey">Technologies</h1>
-          <div className="lineWrapper">
+          <div className="lineWrapper mb-4">
             <div className="innerLine"></div>
           </div>
+          <div className="container mt-5 text-left">
+            <div className="row mt-5">
+              <div className="col-sm-6 p0 textLeftPadding">
+                <div className='techCaption d-table'>
+                  <div className="captionArea">
+                    <h3 className='fontBold'>JAVASCRIPT</h3>
+                    <p className="text-justify">I have a vast amount of experience building websites and web applications
+                    with modern frameworks such as Vanilla JS, jQuery,
+                    React, Next JS for server side rendering, and JAMstack with Gatsby JS
+                    </p>
+                  </div>
+                </div></div>
+              <div className="col-sm-6 imageLeftPadding">
+                <div className='bgSecondary'>
+                  <Carousel
+                    autoPlay={1000}
+                    slidesPerPage={2}
+                    animationSpeed={1000}
+                    infinite
+                  >
+                    {data.JavascriptImages.nodes.map(jsImage => (
+                      <div key={jsImage.id} className='carouselWrapper h250'>
+                        <Img
+                          fluid={jsImage.childImageSharp.fluid}
+                          durationFadeIn={500}
+                        />
+                      </div>
+                    ))}
+                  </Carousel>
+                </div>
+              </div>
+            </div>
+            <div className="row mt-5">
+              <div className="col-sm-6 imageRightPadding">
+                <div className='bgSecondary'>
+                  <Carousel
+                    autoPlay={1000}
+                    slidesPerPage={2}
+                    rtl
+                    animationSpeed={1000}
+                    infinite
+                  >
+                    {data.CssImages.nodes.map(cssImage => (
+                      <div key={cssImage.id} className='carouselWrapper h250'>
+                        <Img
+                          fluid={cssImage.childImageSharp.fluid}
+                          durationFadeIn={500}
+                        />
+                      </div>
+                    ))}
+                  </Carousel>
+                </div>
+              </div>
+              <div className="col-sm-6 p0 ">
+                <div className='techCaption d-table'>
+                  <div className="captionArea">
+                    <h3 className='fontBold'>CSS</h3>
+                    <p className="text-justify">I produce responsive markup
+                    styles with an emphasis on accessibility and performance. I'm also familiar with many CSS frameworks and extensions like
+                    Bootstrap, Material UI, Styled Components, styled-jsx, Sass, Ant Design and many others
+                    </p>
+                  </div>
+                </div></div>
+            </div>
+            <div className="row mt-5">
+              <div className="col-sm-6 p0 textLeftPadding">
+                <div className='techCaption d-table'>
+                  <div className="captionArea">
+                    <h3 className='fontBold'>DEV OPS</h3>
+                    <p className="text-justify">I have a passion for scripting and coding and
+                    improving the planning of test and deployment
+                    in order to  build, test, and release software faster and more reliably.
+                    </p>
+                  </div>
+                </div></div>
+              <div className="col-sm-6 imageLeftPadding">
+                <div className='bgSecondary'>
+                  <Carousel
+                    autoPlay={1000}
+                    slidesPerPage={2}
+                    animationSpeed={1000}
+                    infinite
+                  >
+                    {data.DevHostingImages.nodes.map(devHostingImage => (
+                      <div key={devHostingImage.id} className='carouselWrapper h250'>
+                        <Img
+                          fluid={devHostingImage.childImageSharp.fluid}
+                          durationFadeIn={500}
+                        />
+                      </div>
+                    ))}
 
-          <div className="mt-5 invNeutral">Hello</div>
+                  </Carousel>
+                </div>
+              </div>
+            </div>
+
+            <div className="row mt-5">
+
+              <div className="col-sm-6 imageRightPadding">
+                <div className='bgSecondary'>
+                  <Carousel
+                    autoPlay={1000}
+                    slidesPerPage={2}
+                    animationSpeed={1000}
+                    infinite
+                    rtl
+                  >
+                    {data.TestingImages.nodes.map(testingImage => (
+                      <div key={testingImage.id} className='carouselWrapper h250'>
+                        <Img
+                          fluid={testingImage.childImageSharp.fluid}
+                          durationFadeIn={500}
+                        />
+                      </div>
+                    ))}
+                  </Carousel>
+                </div>
+              </div>
+
+              <div className="col-sm-6 p0 ">
+                <div className='techCaption d-table'>
+                  <div className="captionArea">
+                    <h3 className='fontBold'>TESTING AND LINTING</h3>
+                    <p className="text-justify">I strive to follow best practices using
+                    Test Driven Development with Jest and linting with ESLint, Prettier among others
+                </p>
+                  </div>
+                </div></div>
+            </div>
+          </div>
         </div>
       </div>
 
       <style>
         {`
+        .bgSecondary {
+          background-color: var(--bg) !important;
+        }
+        .carouselWrapper{
+          width: 200px;
+          padding-top: 30px;
+          margin: 0 auto;
+          background-color: transparent
+        }
+        .h250{
+          height: 250px;
+        }
+        .imageLeftPadding{
+          padding-left: 0;
+        }
+        .imageRightPadding{
+          padding-right: 0;
+        }
+        .fontBold{
+          font-weight: bold
+        }
+        .p0{
+          padding: 0
+        }
+        .techCaption{
+          width: inherit;
+          padding: 10px 20px;
+          height: 250px;
+          background-color: ${colors.primary};
+        }
         .invNeutral{
           color: var(--inverseNeutral)
         }
@@ -56,14 +284,31 @@ export default function Technologies() {
           
           }
           @media(max-width: 767px){
-            .pFont{
-              padding-right: 0px
-            
+            .imageLeftPadding{
+              padding: 0px;
             }
           }
-          @media(max-width: 437px){
-            .h1{
-          font-size: 2.0rem;
+          @media(max-width: 575px){
+            .imageLeftPadding{
+              padding: 0px;
+            position: absolute;
+            }
+            .imageRightPadding{
+              padding: 0;
+            }
+            .textLeftPadding{
+              margin-top: 150px
+            }
+            .techCaption{
+              
+              height: 200px;
+            }
+            .h250{
+              height: 150px;
+            }
+            .carouselWrapper{
+              width: 100px;
+             
             }
           }
       .bgPrimaryGrey{

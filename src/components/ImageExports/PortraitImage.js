@@ -19,7 +19,7 @@ const PortraitImage = () => {
       placeholderImage: file(relativePath: { eq: "portrait-background.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG 
           }
         }
       }
@@ -29,7 +29,7 @@ const PortraitImage = () => {
   return (
     <Img
       objectFit="cover"
-      className=""
+      className="h-100"
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   )
