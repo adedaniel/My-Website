@@ -1,6 +1,7 @@
 import React from "react"
 import Typed from "react-typed"
 import { colors } from "../styles/styles"
+import Button from "../button"
 
 export default function Intro({ queryData }) {
   return (
@@ -92,15 +93,15 @@ export default function Intro({ queryData }) {
                   </div>
                 </div>
               </a>
-              <a target="_blank" href={queryData.facebook}>
+              <a target="_blank" href={queryData.whatsapp}>
                 <div className="eachLink d-inline-block">
-                  <div className="innerFacebookLink">
+                  <div className="innerWhatsappLink">
                     <div className="hoverIcon">
-                      <i className="fa fa-facebook" aria-hidden="true"></i>
+                      <i className="fa fa-whatsapp" aria-hidden="true"></i>
                     </div>
                     <div className=" hoverIcon">
                       <i
-                        className="fa fa-facebook text-white"
+                        className="fa fa-whatsapp text-white"
                         aria-hidden="true"
                       ></i>
                     </div>
@@ -109,11 +110,14 @@ export default function Intro({ queryData }) {
               </a>
             </div>
             <a href={`mailto:${queryData.email}`}>
-              <button className="outlinedButton">Get in Touch</button>
+              <Button text='Get in Touch' radius='40px'
+                width='260px'
+                margin='10px 0'
+                height='55px' />
             </a>
           </div>
         </div>
-        <div className="text-center w-100">
+        <div className="text-center arrow w-100">
           <div className="animated infinite bounce slow">
             <i className="fa fa-angle-down angles" aria-hidden="true"></i>
           </div>
@@ -121,6 +125,9 @@ export default function Intro({ queryData }) {
       </div>
       <div></div>
       <style jsx>{`
+      .arrow{
+        height: 70px
+      }
         .angles {
           color: ${colors.primary};
           font-size: 40px;
@@ -182,15 +189,15 @@ export default function Intro({ queryData }) {
           transition: 0.3s;
           background-color: #211f1f;
         }
-        .innerFacebookLink {
+        .innerWhatsappLink {
           margin-top: 0px;
           transition: 0.3s;
           background-color: transparent;
         }
-        .innerFacebookLink:hover {
+        .innerWhatsappLink:hover {
           margin-top: -70px;
           transition: 0.3s;
-          background-color: #3b5998;
+          background-color: #25d366;
         }
 
         .hoverIcon {
@@ -211,7 +218,7 @@ export default function Intro({ queryData }) {
           display: block;
         }
         .vh100 {
-          height: calc(95vh - 49px);
+          height: calc(95vh - 80px);
         }
         .captions {
           width: calc(100vw - 0px);

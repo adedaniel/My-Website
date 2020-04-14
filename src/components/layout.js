@@ -12,10 +12,12 @@ import { colors } from "./styles/styles"
 import Menubar from "./menubar"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, makeActive }) => {
+
+
   return (
     <>
-      <Menubar />
+      <Menubar makeActive={makeActive} />
       <div className="content">
         <main>{children}</main>
         {
@@ -85,13 +87,13 @@ const Layout = ({ children }) => {
 
         /* Handle */
         ::-webkit-scrollbar-thumb {
-          background: var(--greyText);
+          background: var(--scrollHover);
           border-radius: 5px;
         }
 
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
-          background: var(--scrollHover);
+          background: var(--greyText);
         }
       `}</style>
     </>

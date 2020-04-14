@@ -17,10 +17,19 @@ function useWindowSize() {
   }, [])
   return size
 }
-function Header() {
+function Menubar({ makeActive }) {
   const [width, height] = useWindowSize()
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(makeActive || 1)
   const [topClass, setTopClass] = useState("")
+  /* View in fullscreen */
+  function openFullscreen() {
+    if (document.fullscreenEnabled) {
+      document.documentElement.requestFullscreen();
+      console.log('true');
+    }
+  }
+
+
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -67,8 +76,8 @@ function Header() {
                           document.getElementById("toggler").checked = false
                         }}
                       >
-                        <a href="#">
-                          <h5 className="">
+                        <a href="/#">
+                          <h5>
                             <strong>HOME</strong>
                           </h5>
                         </a>
@@ -82,24 +91,9 @@ function Header() {
                           document.getElementById("toggler").checked = false
                         }}
                       >
-                        <a href="#">
+                        <a href="/#is">
                           <h5>
                             <strong>ABOUT</strong>
-                          </h5>
-                        </a>
-                      </li>
-                      <li
-                        className={`sidebarList ${
-                          active === 4 ? "active" : "inactive"
-                          }`}
-                        onClick={() => {
-                          setActive(4)
-                          document.getElementById("toggler").checked = false
-                        }}
-                      >
-                        <a href="#">
-                          <h5>
-                            <strong>SERVICES</strong>
                           </h5>
                         </a>
                       </li>
@@ -112,28 +106,28 @@ function Header() {
                           document.getElementById("toggler").checked = false
                         }}
                       >
-                        <a href="#">
+                        <a href="/#because">
+                          <h5>
+                            <strong>SERVICES</strong>
+                          </h5>
+                        </a>
+                      </li>
+                      <li
+                        className={`sidebarList ${
+                          active === 4 ? "active" : "inactive"
+                          }`}
+                        onClick={() => {
+                          setActive(4)
+                          document.getElementById("toggler").checked = false
+                        }}
+                      >
+                        <a href="/#uses">
                           <h5>
                             <strong>TECHNOLOGIES</strong>
                           </h5>
                         </a>
                       </li>
 
-                      <li
-                        className={`sidebarList ${
-                          active === 6 ? "active" : "inactive"
-                          }`}
-                        onClick={() => {
-                          setActive(6)
-                          document.getElementById("toggler").checked = false
-                        }}
-                      >
-                        <a href="#">
-                          <h5>
-                            <strong>PORTFOLIO</strong>
-                          </h5>
-                        </a>
-                      </li>
                       <li
                         className={`sidebarList ${
                           active === 5 ? "active" : "inactive"
@@ -143,7 +137,22 @@ function Header() {
                           document.getElementById("toggler").checked = false
                         }}
                       >
-                        <a href="#">
+                        <a href="/#made">
+                          <h5>
+                            <strong>PORTFOLIO</strong>
+                          </h5>
+                        </a>
+                      </li>
+                      <li
+                        className={`sidebarList ${
+                          active === 6 ? "active" : "inactive"
+                          }`}
+                        onClick={() => {
+                          setActive(6)
+                          document.getElementById("toggler").checked = false
+                        }}
+                      >
+                        <a href="/#worked-with">
                           <h5>
                             <strong>CLIENTS</strong>
                           </h5>
@@ -158,7 +167,7 @@ function Header() {
                           document.getElementById("toggler").checked = false
                         }}
                       >
-                        <a href="#">
+                        <a href="/#is-waiting">
                           <h5>
                             <strong>CONTACT</strong>
                           </h5>
@@ -214,8 +223,8 @@ function Header() {
             className={`sidebarList ${active === 1 ? "active" : "inactive"}`}
             onClick={() => setActive(1)}
           >
-            <a href="#">
-              <h5 className="#start">
+            <a href="/#">
+              <h5>
                 <strong>HOME</strong>
               </h5>
             </a>
@@ -224,19 +233,9 @@ function Header() {
             className={`sidebarList ${active === 2 ? "active" : "inactive"}`}
             onClick={() => setActive(2)}
           >
-            <a href="#me">
+            <a href="/#is">
               <h5>
                 <strong>ABOUT</strong>
-              </h5>
-            </a>
-          </li>
-          <li
-            className={`sidebarList ${active === 4 ? "active" : "inactive"}`}
-            onClick={() => setActive(4)}
-          >
-            <a href="#abilities">
-              <h5>
-                <strong>SERVICES</strong>
               </h5>
             </a>
           </li>
@@ -244,7 +243,17 @@ function Header() {
             className={`sidebarList ${active === 3 ? "active" : "inactive"}`}
             onClick={() => setActive(3)}
           >
-            <a href="#tools">
+            <a href="/#because">
+              <h5>
+                <strong>SERVICES</strong>
+              </h5>
+            </a>
+          </li>
+          <li
+            className={`sidebarList ${active === 4 ? "active" : "inactive"}`}
+            onClick={() => setActive(4)}
+          >
+            <a href="/#uses">
               <h5>
                 <strong>TECHNOLOGIES</strong>
               </h5>
@@ -252,20 +261,20 @@ function Header() {
           </li>
 
           <li
-            className={`sidebarList ${active === 6 ? "active" : "inactive"}`}
-            onClick={() => setActive(6)}
+            className={`sidebarList ${active === 5 ? "active" : "inactive"}`}
+            onClick={() => setActive(5)}
           >
-            <a href="#works">
+            <a href="/#made">
               <h5>
                 <strong>PORTFOLIO</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList ${active === 5 ? "active" : "inactive"}`}
-            onClick={() => setActive(5)}
+            className={`sidebarList ${active === 6 ? "active" : "inactive"}`}
+            onClick={() => setActive(6)}
           >
-            <a href="#partners">
+            <a href="/#worked-with">
               <h5>
                 <strong>CLIENTS</strong>
               </h5>
@@ -275,7 +284,7 @@ function Header() {
             className={`sidebarList ${active === 7 ? "active" : "inactive"}`}
             onClick={() => setActive(7)}
           >
-            <a href="#get-in-touch">
+            <a href="/#is-waiting">
               <h5>
                 <strong>CONTACT</strong>
               </h5>
@@ -316,10 +325,10 @@ function Header() {
           </h5>
         </ul>
 
-        <p className="textdarkTextGrey">
+        <small className="textdarkTextGrey">
           For business or casual chatter, email me at
           adetoladaniel693@gmail.com.
-        </p>
+        </small>
       </div>
       <style jsx>
         {`
@@ -583,12 +592,12 @@ function Header() {
   )
 }
 
-Header.propTypes = {
+Menubar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Menubar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Menubar

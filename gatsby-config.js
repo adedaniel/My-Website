@@ -10,7 +10,7 @@ module.exports = {
     linkedin: config.socialLinks.linkedin,
     instagram: config.socialLinks.instagram,
     youtube: config.socialLinks.youtube,
-    facebook: config.socialLinks.facebook,
+    whatsapp: config.socialLinks.whatsapp,
     email: config.contact.email,
     phone: config.contact.phone,
   },
@@ -24,7 +24,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
@@ -58,5 +67,11 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`],
+      },
+    },
   ],
 }
