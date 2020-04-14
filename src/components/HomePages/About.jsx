@@ -6,8 +6,8 @@ export default function About() {
   return (
     <>
       <div className="pt-1 bgPrimaryGrey">
-        <div className="text-center mt-5" id="me">
-          <h1 className="mb-1 bgGrey">About Me</h1>
+        <div className="text-center mt-5" id="is">
+          <h1 className="mb-1 bgGrey mt20">About Me</h1>
           <div className="lineWrapper">
             <div className="innerLine"></div>
           </div>
@@ -37,14 +37,16 @@ export default function About() {
                     <br />
                     I’m very passionate about building excellent software that
                     improves the lives of those around me. So I create powerful
-                    software for clients ranging from your friendly neighbour to
-                    the local restaurant to startups, all the way to large
+                    software for clients ranging from your friendly neighbour all the way to large
                     corporations.
                     <br />
                     <br />
                     When I'm not smacking a keyboard, you can bet I'm either
                     playing a piano or a video game, eating or spending time
                     with my family.
+                    <br />
+                    <br />
+                    You can also check out my CV <a href="" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></a>
                   </p>
                 </div>
               </div>
@@ -55,6 +57,9 @@ export default function About() {
 
       <style>
         {`
+        .mt20{
+          margin-top: 20px
+        }
       .invNeutral{
         color: var(--inverseNeutral)
       }
@@ -71,6 +76,19 @@ export default function About() {
           background-position: 0 80%;
           background-repeat: repeat-x;
           background-size: 10px 12px;
+          color: var(--inverseNeutral);
+          text-decoration: none;
+          transition: all 0.5s;
+        }
+        .hoverSmallEffect {
+          background: linear-gradient(
+            to bottom,
+            ${colors.primary} 0%,
+            ${colors.primary} 100%
+          );
+          background-position: 0 80%;
+          background-repeat: repeat-x;
+          background-size: 10px 6px;
           color: var(--inverseNeutral);
           text-decoration: none;
           transition: all 0.5s;

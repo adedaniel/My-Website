@@ -7,9 +7,9 @@ import FastImage from "../ImageExports/FastImage"
 export default function Services() {
   return (
     <div className="bgColor">
-      <div className=" w-100 container  py-5">
-        <div className="text-center" id="abilities">
-          <h1 className="mb-1 bgGrey">Services</h1>
+      <div className=" w-100 container  py-5" id="because">
+        <div className="text-center" >
+          <h1 className="mb-1 bgGrey mt-20">Services</h1>
           <div className="lineWrapper">
             <div className="innerLine"></div>
           </div>
@@ -108,6 +108,9 @@ export default function Services() {
       </div>
       <style jsx>
         {`
+        .mt20{
+          margin-top: 20px
+        }
           .iconWrapper {
             width: 60px;
             margin: 0 auto;
@@ -363,12 +366,20 @@ export default function Services() {
             .main-timeline .timeline-content,
             .main-timeline .timeline:nth-child(2n) .timeline-content {
               width: 95%;
-              text-align: center;
-              padding: 10px 0;
+              text-align: left;
+              padding: 20px 0px 20px 50px;
             }
             .main-timeline .title {
               margin-bottom: 10px;
             }
+            .main-timeline .timeline:nth-child(1n) .timeline-content {
+              padding: 20px 0px 20px 20px !important;
+              text-align: left;
+          }
+          .main-timeline .timeline:nth-child(2n) .timeline-content {
+            padding: 20px 0px 20px 20px !important;
+            text-align: left;
+        }
           }
         `}
       </style>

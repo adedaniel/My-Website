@@ -12,7 +12,7 @@ export default function HomePage() {
       site {
         siteMetadata {
           title
-          facebook
+          whatsapp
           github
           linkedin
           twitter

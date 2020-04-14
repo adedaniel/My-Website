@@ -1,7 +1,7 @@
 module.exports = {
   defaultTitle: "adedaniel",
-  logo: "../images/adedaniel's logo.png",
-  icon: "../images/adedaniel's icon.png",
+  logo: "../images/adedaniel's-logo.png",
+  icon: "../images/adedaniel's-icon.png",
   author: "adedaniel",
   url: "https://adedaniel.com",
   legalName: "Adetola Daniel",
@@ -13,6 +13,7 @@ module.exports = {
     instagram: "https://instagram.com/king_dannyel",
     youtube: "https://www.youtube.com/channel/UCRCo2e9bgFG59L3ogKZnQEg",
     facebook: "https://www.facebook.com/daniel.adetola.3",
+    whatsapp: "https://wa.me/2348104172477"
   },
   // googleAnalyticsID: "UA-88875900-4",
   themeColor: "#61dafb",
@@ -29,7 +30,7 @@ module.exports = {
   },
   contact: {
     email: "adetoladaniel693@gmail.com",
-    phone: "08104172477",
+    phone: "+2348104172477",
   },
   foundingDate: "2020",
   // recaptcha_key: "6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TU3efpMN",

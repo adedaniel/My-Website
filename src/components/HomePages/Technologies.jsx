@@ -74,8 +74,8 @@ export default function Technologies() {
   return (
     <>
       <div className="pt-1 bgPrimaryGrey">
-        <div className="text-center py-5" id="me">
-          <h1 className="mb-1 bgGrey">Technologies</h1>
+        <div className="text-center py-5" id="uses">
+          <h1 className="mb-1 bgGrey mt20">Technologies</h1>
           <div className="lineWrapper mb-4">
             <div className="innerLine"></div>
           </div>
@@ -98,6 +98,8 @@ export default function Technologies() {
                     slidesPerPage={2}
                     animationSpeed={1000}
                     infinite
+                  // infiniteLoop autoPlay interval={1000} verticalSwipe='natural' showThumbs={false} showArrows={false} showIndicators={false} showStatus={false} stopOnHover={false}
+
                   >
                     {data.JavascriptImages.nodes.map(jsImage => (
                       <div key={jsImage.id} className='carouselWrapper h250'>
@@ -215,6 +217,9 @@ export default function Technologies() {
 
       <style>
         {`
+        .mt20{
+          margin-top: 20px
+        }
         .bgSecondary {
           background-color: var(--bg) !important;
         }
