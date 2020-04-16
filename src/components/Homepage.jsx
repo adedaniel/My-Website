@@ -5,6 +5,8 @@ import About from "./HomePages/About"
 import Services from "./HomePages/Services"
 import Technologies from "./HomePages/Technologies"
 import Portfolio from "./HomePages/Portfolio"
+import Clients from "./HomePages/Clients"
+import Contact from "./HomePages/Contact"
 
 export default function HomePage() {
   const data = useStaticQuery(graphql`
@@ -26,12 +28,15 @@ export default function HomePage() {
   const queryData = data.site.siteMetadata
 
   return (
-    <>
+    <div data-spy="scroll" data-target="menu" data-offset="0">
       <Intro queryData={queryData} />
       <About />
       <Services />
       <Technologies />
       <Portfolio />
-    </>
+      <Clients />
+      <Contact />
+
+    </div>
   )
 }

@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <div className="pt-1 bgPrimaryGrey">
-        <div className="text-center mt-5" id="is">
+        <div className="text-center pt-5" id="is">
           <h1 className="mb-1 bgGrey mt20">About Me</h1>
           <div className="lineWrapper">
             <div className="innerLine"></div>
@@ -58,7 +58,7 @@ export default function About() {
       <style>
         {`
         .mt20{
-          margin-top: 20px
+          margin-top: 25px
         }
       .invNeutral{
         color: var(--inverseNeutral)

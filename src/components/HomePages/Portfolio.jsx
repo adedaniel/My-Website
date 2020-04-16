@@ -137,7 +137,7 @@ export default function Portfolio() {
 
       <style jsx>{`
       .mt20{
-        margin-top: 20px
+        margin-top: 25px
       }
       .eachProjectList:nth-child(even) .col-md-8 {
       left: -40%

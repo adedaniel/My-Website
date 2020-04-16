@@ -9,7 +9,7 @@ export default function Intro({ queryData }) {
       <div className=" w-100 bgColor" id="start">
         <div className=" vh100 d-table-cell vAlign ">
           <div className="container captions">
-            <h2 className="textColor">HI THERE, </h2>
+            <h3 className="textColor">HI THERE, </h3>
             <h1 className="textColor fontTwo">
               I'M{" "}
               <strong className="font-weight-bold">
@@ -251,7 +251,7 @@ export default function Intro({ queryData }) {
         }
         @media (max-width: 767px) {
           .fontTwo {
-            font-size: 6vh;
+            font-size: 5vh;
           }
         }
         .textColor {

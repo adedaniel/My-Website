@@ -11,7 +11,7 @@ code: "hny"
 
  <br/>
 
-##### Safe to say I started the new year coding. I wanted to make something fun and engaging and brief so I made this. It was completed within 8 hours (I know right?) Check it out!
+##### Safe to say I started the new year coding. I wanted to make something fun, engaging and brief so I made this. It was completed within 8 hours (I know right?) Check it out!
 
 <br/>
 <br/>

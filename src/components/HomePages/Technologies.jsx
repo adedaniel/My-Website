@@ -94,9 +94,9 @@ export default function Technologies() {
               <div className="col-sm-6 imageLeftPadding">
                 <div className='bgSecondary'>
                   <Carousel
-                    autoPlay={1000}
+                    autoPlay={1200}
                     slidesPerPage={2}
-                    animationSpeed={1000}
+                    animationSpeed={1100}
                     infinite
                   // infiniteLoop autoPlay interval={1000} verticalSwipe='natural' showThumbs={false} showArrows={false} showIndicators={false} showStatus={false} stopOnHover={false}
 
@@ -117,10 +117,10 @@ export default function Technologies() {
               <div className="col-sm-6 imageRightPadding">
                 <div className='bgSecondary'>
                   <Carousel
-                    autoPlay={1000}
+                    autoPlay={1200}
                     slidesPerPage={2}
                     rtl
-                    animationSpeed={1000}
+                    animationSpeed={1100}
                     infinite
                   >
                     {data.CssImages.nodes.map(cssImage => (
@@ -159,9 +159,9 @@ export default function Technologies() {
               <div className="col-sm-6 imageLeftPadding">
                 <div className='bgSecondary'>
                   <Carousel
-                    autoPlay={1000}
+                    autoPlay={1200}
                     slidesPerPage={2}
-                    animationSpeed={1000}
+                    animationSpeed={1100}
                     infinite
                   >
                     {data.DevHostingImages.nodes.map(devHostingImage => (
@@ -183,9 +183,9 @@ export default function Technologies() {
               <div className="col-sm-6 imageRightPadding">
                 <div className='bgSecondary'>
                   <Carousel
-                    autoPlay={1000}
+                    autoPlay={1200}
                     slidesPerPage={2}
-                    animationSpeed={1000}
+                    animationSpeed={1100}
                     infinite
                     rtl
                   >
@@ -218,7 +218,7 @@ export default function Technologies() {
       <style>
         {`
         .mt20{
-          margin-top: 20px
+          margin-top: 25px
         }
         .bgSecondary {
           background-color: var(--bg) !important;
