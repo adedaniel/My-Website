@@ -30,7 +30,7 @@ module.exports = {
   },
   contact: {
     email: "adetoladaniel693@gmail.com",
-    phone: "+2348104172477",
+    phone: "+234 (81) 0417 2477",
   },
   foundingDate: "2020",
   // recaptcha_key: "6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TU3efpMN",

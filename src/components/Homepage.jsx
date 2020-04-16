@@ -35,7 +35,7 @@ export default function HomePage() {
       <Technologies />
       <Portfolio />
       <Clients />
-      <Contact />
+      <Contact queryData={queryData} />
 
     </div>
   )

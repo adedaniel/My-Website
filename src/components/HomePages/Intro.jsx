@@ -6,7 +6,7 @@ import Button from "../button"
 export default function Intro({ queryData }) {
   return (
     <div>
-      <div className=" w-100 bgColor" id="start">
+      <div className=" w-100 bgColor" id="home">
         <div className=" vh100 d-table-cell vAlign ">
           <div className="container captions">
             <h3 className="textColor">HI THERE, </h3>
@@ -109,6 +109,7 @@ export default function Intro({ queryData }) {
                 </div>
               </a>
             </div>
+
             <a href={`mailto:${queryData.email}`}>
               <Button text='Get in Touch' radius='40px'
                 width='260px'
