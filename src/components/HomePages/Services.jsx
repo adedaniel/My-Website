@@ -7,9 +7,9 @@ import FastImage from "../ImageExports/FastImage"
 export default function Services() {
   return (
     <div className="bgColor">
-      <div className=" w-100 container  py-5" id="because">
+      <div className=" w-100 container py-5" id="does">
         <div className="text-center" >
-          <h1 className="mb-1 bgGrey mt-20">Services</h1>
+          <h1 className="mb-1 bgGrey mt20">Services</h1>
           <div className="lineWrapper">
             <div className="innerLine"></div>
           </div>
@@ -31,7 +31,7 @@ export default function Services() {
                 <p className="description">
                   I create fast, beautiful, cost-effective and efficient
                   websites and web applications with perfect scores in
-                  Performance, Accessibility, SEO and Best Practices. All web
+                  Performance, SEO and Best Practices. All web
                   apps are built with the latest and sophisticated technologies
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function Services() {
                 <p className="description">
                   It's 2020 and you and your clients should see that in your
                   final product. This involves best practices regarding
-                  performance, accessibility, security and usability. This
+                  accessibility, security and usability. This
                   results in appropriate design, secure websites and fast load
                   times.
                 </p>
@@ -109,7 +109,7 @@ export default function Services() {
       <style jsx>
         {`
         .mt20{
-          margin-top: 20px
+          margin-top: 25px
         }
           .iconWrapper {
             width: 60px;
@@ -384,5 +384,6 @@ export default function Services() {
         `}
       </style>
     </div>
+
   )
 }

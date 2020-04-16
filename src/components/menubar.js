@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect, useLayoutEffect } from "react"
 import { colors } from "./styles/styles"
+import Scrollspy from 'react-scrollspy'
 import LogoImage from "./ImageExports/LogoImage"
 
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
@@ -211,49 +212,51 @@ function Menubar({ makeActive }) {
         }
       </div>
 
-      <div className="vh-100 sidebar bgPrimary">
+      <div className="vh-100 sidebar bgPrimary" id="menu" >
         <LogoImage />
         <h6 className="my-4 textdarkTextGrey">
           Web Developer <br /> UI/UX Designer <br />
           Engineering Student <br />
         </h6>
         <hr className="lineGrey" />
-        <ul className="p-0 mb-4">
+
+
+        <Scrollspy style={{ padding: 0, margin: '30px 0' }} offset={-300} items={['start', 'is', 'does', 'uses', 'made', 'worked-with', 'is-waiting']} currentClassName="active">
           <li
-            className={`sidebarList ${active === 1 ? "active" : "inactive"}`}
+            className={`sidebarList `}
             onClick={() => setActive(1)}
           >
-            <a href="/#">
+            <a href="#start">
               <h5>
                 <strong>HOME</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList ${active === 2 ? "active" : "inactive"}`}
+            className={`sidebarList `}
             onClick={() => setActive(2)}
           >
-            <a href="/#is">
+            <a href="#is">
               <h5>
                 <strong>ABOUT</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList ${active === 3 ? "active" : "inactive"}`}
+            className={`sidebarList `}
             onClick={() => setActive(3)}
           >
-            <a href="/#because">
+            <a href="#does">
               <h5>
                 <strong>SERVICES</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList ${active === 4 ? "active" : "inactive"}`}
+            className={`sidebarList `}
             onClick={() => setActive(4)}
           >
-            <a href="/#uses">
+            <a href="#uses">
               <h5>
                 <strong>TECHNOLOGIES</strong>
               </h5>
@@ -261,69 +264,72 @@ function Menubar({ makeActive }) {
           </li>
 
           <li
-            className={`sidebarList ${active === 5 ? "active" : "inactive"}`}
+            className={`sidebarList `}
             onClick={() => setActive(5)}
           >
-            <a href="/#made">
+            <a href="#made">
               <h5>
                 <strong>PORTFOLIO</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList ${active === 6 ? "active" : "inactive"}`}
+            className={`sidebarList `}
             onClick={() => setActive(6)}
           >
-            <a href="/#worked-with">
+            <a href="#worked-with">
               <h5>
                 <strong>CLIENTS</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList ${active === 7 ? "active" : "inactive"}`}
+            className={`sidebarList `}
             onClick={() => setActive(7)}
           >
-            <a href="/#is-waiting">
+            <a href="#is-waiting">
               <h5>
                 <strong>CONTACT</strong>
               </h5>
             </a>
           </li>
-          <hr className="lineGrey" />
-          <h5 className="textGrey">
-            Theme &nbsp;&nbsp;
-            {width >= 992 ? (
-              <ThemeToggler>
-                {({ theme, toggleTheme }) => (
-                  // <input
-                  //   type="checkbox"
-                  //   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                  //   checked={theme === 'dark'}
-                  // />
-                  <button
-                    className="darkModeToggler bgColor"
-                    onClick={() => setToggle(theme, toggleTheme)}
-                  >
-                    {theme === "light" ? (
+
+        </Scrollspy>
+
+        <hr className="lineGrey" />
+        <h5 className="textGrey">
+          Theme &nbsp;&nbsp;
+      {width >= 992 ? (
+            <ThemeToggler>
+              {({ theme, toggleTheme }) => (
+                // <input
+                //   type="checkbox"
+                //   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                //   checked={theme === 'dark'}
+                // />
+                <button
+                  className="darkModeToggler bgColor"
+                  onClick={() => setToggle(theme, toggleTheme)}
+                >
+                  {theme === "light" ? (
+                    <i
+                      className="fa fa-sun-o textGrey"
+                      aria-hidden="true"
+                    ></i>
+                  ) : (
                       <i
-                        className="fa fa-sun-o textGrey"
+                        className="fa fa-moon-o text-white"
                         aria-hidden="true"
                       ></i>
-                    ) : (
-                        <i
-                          className="fa fa-moon-o text-white"
-                          aria-hidden="true"
-                        ></i>
-                      )}
-                  </button>
-                )}
-              </ThemeToggler>
-            ) : (
-                ""
+                    )}
+                </button>
               )}
-          </h5>
-        </ul>
+            </ThemeToggler>
+          ) : (
+              ""
+            )}
+        </h5>
+
 
         <small className="textdarkTextGrey">
           For business or casual chatter, email me at

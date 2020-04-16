@@ -7,9 +7,9 @@ link: "https://covid-updates.netlify.com"
 code: "corvs"
 ---
 
-> I sincerely hope that by the time you are reading this, this pandemic would ended and life returns back to normal.
+> I sincerely hope that by the time you are reading this, this pandemic would have ended and life returns back to normal.
 
-> ## The goal of the entire endeavour was to create a place where anyone can get any information about the Covid-19 status in any country in the world...
+> ## The goal of the entire endeavour was to create a site where anyone can get any information about the Covid-19 status in any country in the world...
 
  <br/>
 
@@ -39,6 +39,6 @@ Health, Data Visualization
 **Contribution:**  
 Interaction and visual design, front-end development  
 **Skills exercised:**  
-System design; React JS, Gatsby JS, styled-jsx, Google Charts\
+System design; React JS, Next JS, styled-jsx, Google Charts\
 **Engagement period:**
 April 2020
