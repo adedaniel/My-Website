@@ -67,28 +67,24 @@ function Menubar({ makeActive }) {
                   <div>
                     <LogoImage />
                     <hr className=" mt-4" />
-                    <ul className="p-0 mb-4 mt-2">
+                    <Scrollspy style={{ padding: 0, margin: '20px 0px 10px 0px' }} offset={-300} items={['home', 'is', 'does', 'uses', 'made', 'worked-with', 'is-waiting']} currentClassName="active">
+
+
                       <li
-                        className={`sidebarList ${
-                          active === 1 ? "active" : "inactive"
-                          }`}
+                        className={`mobileSidebarList inactive`}
                         onClick={() => {
-                          setActive(1)
                           document.getElementById("toggler").checked = false
                         }}
                       >
-                        <a href="/#">
+                        <a href="/#home">
                           <h5>
                             <strong>HOME</strong>
                           </h5>
                         </a>
                       </li>
                       <li
-                        className={`sidebarList ${
-                          active === 2 ? "active" : "inactive"
-                          }`}
+                        className={`mobileSidebarList inactive`}
                         onClick={() => {
-                          setActive(2)
                           document.getElementById("toggler").checked = false
                         }}
                       >
@@ -99,26 +95,20 @@ function Menubar({ makeActive }) {
                         </a>
                       </li>
                       <li
-                        className={`sidebarList ${
-                          active === 3 ? "active" : "inactive"
-                          }`}
+                        className={`mobileSidebarList inactive`}
                         onClick={() => {
-                          setActive(3)
                           document.getElementById("toggler").checked = false
                         }}
                       >
-                        <a href="/#because">
+                        <a href="/#does">
                           <h5>
                             <strong>SERVICES</strong>
                           </h5>
                         </a>
                       </li>
                       <li
-                        className={`sidebarList ${
-                          active === 4 ? "active" : "inactive"
-                          }`}
+                        className={`mobileSidebarList inactive`}
                         onClick={() => {
-                          setActive(4)
                           document.getElementById("toggler").checked = false
                         }}
                       >
@@ -128,13 +118,9 @@ function Menubar({ makeActive }) {
                           </h5>
                         </a>
                       </li>
-
                       <li
-                        className={`sidebarList ${
-                          active === 5 ? "active" : "inactive"
-                          }`}
+                        className={`mobileSidebarList inactive`}
                         onClick={() => {
-                          setActive(5)
                           document.getElementById("toggler").checked = false
                         }}
                       >
@@ -145,11 +131,8 @@ function Menubar({ makeActive }) {
                         </a>
                       </li>
                       <li
-                        className={`sidebarList ${
-                          active === 6 ? "active" : "inactive"
-                          }`}
+                        className={`mobileSidebarList inactive`}
                         onClick={() => {
-                          setActive(6)
                           document.getElementById("toggler").checked = false
                         }}
                       >
@@ -160,9 +143,7 @@ function Menubar({ makeActive }) {
                         </a>
                       </li>
                       <li
-                        className={`sidebarList ${
-                          active === 7 ? "active" : "inactive"
-                          }`}
+                        className={`mobileSidebarList`}
                         onClick={() => {
                           setActive(7)
                           document.getElementById("toggler").checked = false
@@ -203,7 +184,10 @@ function Menubar({ makeActive }) {
                           )}
                         </ThemeToggler>
                       </h5>
-                    </ul>
+
+
+
+                    </Scrollspy>
                   </div>
                 </div>
               </div>
@@ -215,48 +199,43 @@ function Menubar({ makeActive }) {
       <div className="vh-100 sidebar bgPrimary" id="menu" >
         <LogoImage />
         <h6 className="my-4 textdarkTextGrey">
-          Web Developer <br /> UI/UX Designer <br />
+          Web Developer <br />
+          UI/UX Designer <br />
           Engineering Student <br />
         </h6>
         <hr className="lineGrey" />
-
-
-        <Scrollspy style={{ padding: 0, margin: '30px 0' }} offset={-300} items={['start', 'is', 'does', 'uses', 'made', 'worked-with', 'is-waiting']} currentClassName="active">
+        <Scrollspy style={{ padding: 0, margin: '30px 0' }} offset={-300} items={['home', 'is', 'does', 'uses', 'made', 'worked-with', 'is-waiting']} currentClassName="active">
           <li
-            className={`sidebarList `}
-            onClick={() => setActive(1)}
+            className={`sidebarList inactive `}
           >
-            <a href="#start">
+            <a href="/#home">
               <h5>
                 <strong>HOME</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList `}
-            onClick={() => setActive(2)}
+            className={`sidebarList inactive `}
           >
-            <a href="#is">
+            <a href="/#is">
               <h5>
                 <strong>ABOUT</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList `}
-            onClick={() => setActive(3)}
+            className={`sidebarList inactive `}
           >
-            <a href="#does">
+            <a href="/#does">
               <h5>
                 <strong>SERVICES</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList `}
-            onClick={() => setActive(4)}
+            className={`sidebarList inactive `}
           >
-            <a href="#uses">
+            <a href="/#uses">
               <h5>
                 <strong>TECHNOLOGIES</strong>
               </h5>
@@ -264,30 +243,27 @@ function Menubar({ makeActive }) {
           </li>
 
           <li
-            className={`sidebarList `}
-            onClick={() => setActive(5)}
+            className={`sidebarList inactive `}
           >
-            <a href="#made">
+            <a href="/#made">
               <h5>
                 <strong>PORTFOLIO</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList `}
-            onClick={() => setActive(6)}
+            className={`sidebarList inactive `}
           >
-            <a href="#worked-with">
+            <a href="/#worked-with">
               <h5>
                 <strong>CLIENTS</strong>
               </h5>
             </a>
           </li>
           <li
-            className={`sidebarList `}
-            onClick={() => setActive(7)}
+            className={`sidebarList inactive `}
           >
-            <a href="#is-waiting">
+            <a href="/#is-waiting">
               <h5>
                 <strong>CONTACT</strong>
               </h5>
@@ -476,7 +452,7 @@ function Menubar({ makeActive }) {
           }
 
           .menu-wrap .menu > div > div > ul > li {
-            margin: 0 auto;
+            margin: 0 auto !important;
             list-style: none;
             color: var(--greyText);
             font-size: 1.5rem;
@@ -535,15 +511,74 @@ function Menubar({ makeActive }) {
             border-bottom: 2px solid var(--greyText); /* This creates the border. Replace black with whatever color you want. */
             transition: all 0.7s;
           }
+
           .sidebarList.active a {
             color: ${colors.primary};
           }
           .sidebarList.active {
+            /* content: "" !important;  This is necessary for the pseudo element to work. */
+            display: block !important; /* This will put the pseudo element on its own line. */
+            width: fit-content !important; /* Change this to whatever width you want. */
+            padding-top: 0px !important; /* This creates some space between the element and the border. */
+            border-bottom: 2px solid ${colors.primary} !important; /* This creates the border. Replace black with whatever color you want. */
+            transition: all 0.7s !important;
+          }
+.sidebarList.active::after {
+            content: ""; /* This is necessary for the pseudo element to work. */
+            display: block; /* This will put the pseudo element on its own line. */
+            width: fit-content !important; /* Change this to whatever width you want. */
+            padding-top: 0px; /* This creates some space between the element and the border. */
+            border-bottom: none !important; /* This creates the border. Replace black with whatever color you want. */
+            transition: all 0.7s;
+          }
+
+
+
+          .mobileSidebarList {
+            width: fit-content;
+            padding: 7px 0;
+            margin: 5px auto;
+            list-style: none;
+            border-bottom-width: 2px;
+            border-bottom-color: transparent;
+            border-bottom-style: solid;
+            transition: all 0.5s;
+          }
+          .mobileSidebarList a {
+            text-decoration: none;
+            color: var(--greyText);
+          }
+          .mobileSidebarList a h5 {
+            margin: 0;
+          }
+          .mobileSidebarList:hover::after {
+            width: 100%;
+          }
+          .mobileSidebarList.inactive::after {
+            content: ""; /* This is necessary for the pseudo element to work. */
+            display: block; /* This will put the pseudo element on its own line. */
+            width: 0%; /* Change this to whatever width you want. */
+            padding-top: 0px; /* This creates some space between the element and the border. */
+            border-bottom: 2px solid var(--greyText); /* This creates the border. Replace black with whatever color you want. */
+            transition: all 0.7s;
+          }
+          .mobileSidebarList.active a {
+            color: ${colors.primary};
+          }
+          .mobileSidebarList.active {
             /* content: "";  This is necessary for the pseudo element to work. */
             display: block; /* This will put the pseudo element on its own line. */
             width: fit-content; /* Change this to whatever width you want. */
             padding-top: 0px; /* This creates some space between the element and the border. */
             border-bottom: 2px solid ${colors.primary}; /* This creates the border. Replace black with whatever color you want. */
+            transition: all 0.7s;
+          }
+          .mobileSidebarList.active::after {
+            content: ""; /* This is necessary for the pseudo element to work. */
+            display: block; /* This will put the pseudo element on its own line. */
+            width: fit-content !important; /* Change this to whatever width you want. */
+            padding-top: 0px; /* This creates some space between the element and the border. */
+            border-bottom: none !important; /* This creates the border. Replace black with whatever color you want. */
             transition: all 0.7s;
           }
           @media (max-width: 991px) {
@@ -572,9 +607,9 @@ function Menubar({ makeActive }) {
             padding-top: 15px;
             padding-bottom: 15px;
             /*background-color: rgba(255, 255, 255, 0.99) !important;*/
-            -webkit-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.3);
-            -moz-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.3);
-            box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.3);
+            -webkit-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.1);
+            -moz-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.1);
+            box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.1);
           }
           .tm-1 {
             margin-top: -1px;

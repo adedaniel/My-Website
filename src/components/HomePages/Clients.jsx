@@ -14,9 +14,7 @@ export default function Clients() {
             fluid {
               ...GatsbyImageSharpFluid_tracedSVG ##Adds B/W Preloader
             }
-            fixed(width: 200, height: 200) {
-                ...GatsbyImageSharpFixed_tracedSVG ##Adds B/W Preloader
-              }
+           
           }
         }
       }
@@ -38,7 +36,7 @@ export default function Clients() {
               <div className="col-sm-5">
                 <div className="d-table hImage captionParent">
                   <div className="captionArea captionPadding">
-                    <h1 className='clientsCaption'>Some of the companies I've worked with...</h1>
+                    <h1 className='clientsCaption'>Some of the people I've worked with...</h1>
                   </div>
                 </div>
               </div>
@@ -67,6 +65,7 @@ export default function Clients() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
       <style jsx>{`
