@@ -77,7 +77,9 @@ export default function Technologies() {
           <div className="lineWrapper mb-4">
             <div className="innerLine"></div>
           </div>
+
           <div className="container mt-5 text-left">
+            <p className='bgGrey text-center'>With a variety of technologies to work with, you can be sure to get the very best</p>
             <div className="row mt-5">
               <div className="col-sm-6 p0 textLeftPadding">
                 <div className='techCaption d-table'>

@@ -3,7 +3,6 @@ import React, { useState, useEffect, useLayoutEffect } from "react"
 import { colors } from "./styles/styles"
 import Scrollspy from 'react-scrollspy'
 import LogoImage from "./ImageExports/LogoImage"
-
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 function useWindowSize() {
   const [size, setSize] = useState([0, 0])

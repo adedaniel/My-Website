@@ -79,6 +79,7 @@ module.exports = {
         // exitEventName: 'sal:out', // Exit event name
       },
     },
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

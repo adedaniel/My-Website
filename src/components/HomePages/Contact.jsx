@@ -28,6 +28,7 @@ export default function Contact({ queryData }) {
 
 
                       Wherever you are with your idea or your project, I'll be happy to help.</p>
+                      <h6 className='bgGrey callToAction'>Ready to make a difference?</h6>
                       <div className="row my-5">
                         <div className="col-md-7">
                           <a className='invNeutral' href={`mailto:${queryData.email}`}><h1 className='contactEmail'>{queryData.email}</h1></a>
@@ -148,6 +149,9 @@ export default function Contact({ queryData }) {
         .footer{
           width: 50%;
           margin: 0 auto;
+        }
+        .callToAction{
+          font-weight: bold
         }
          .invNeutral{
           color: var(--inverseNeutral) !important

@@ -10,28 +10,30 @@ export default function Intro({ queryData }) {
       <div className=" w-100 bgColor" id="home">
         <div className=" vh100 d-table-cell vAlign ">
           <div className="container captions">
-            <h3 className="textColor">HI THERE, </h3>
-            <h1 className="textColor fontTwo">
-              I'M{" "}
-              <strong className="font-weight-bold">
-                <span className="hoverEffect biggerText">
-                  <Typed
-                    strings={[
-                      "ADEDANIEL^3000",
-                      "ADEVELOPER",
-                      "ADESIGNER",
-                      "ADEBONAIR",
-                    ]}
-                    typeSpeed={80}
-                    backSpeed={250}
-                    backDelay={2000}
-                    smartBackspace={true}
-                    cursorChar={"_"}
-                    loop={true}
-                  />
-                </span>
-              </strong>
-            </h1>
+            <div className="typeWrapper">
+              <h1 className="textColor fontTwo">
+
+                <strong className="font-weight-bold">
+                  <span className=" biggerText">
+                    <Typed
+                      strings={[
+                        "ENGINEER <br/> BY PROFESSION",
+                        "DEVELOPER <br/> BY PASSION",
+                        "I AM <br/> ADEDANIEL^5000",
+                      ]}
+                      typeSpeed={70}
+                      backSpeed={30}
+                      // fadeOut='true'
+                      // fadeOutDelay={500}
+                      backDelay={2000}
+                      smartBackspace={true}
+                      cursorChar={"_"}
+                      loop={true}
+                    />
+                  </span>
+                </strong>
+              </h1>
+            </div>
             <hr className="mb-1" />
             <div className="contacts">
               <a target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
@@ -129,6 +131,9 @@ export default function Intro({ queryData }) {
       </div>
       <div></div>
       <style jsx>{`
+      .typeWrapper{
+        height: 150px
+      }
       .arrow{
         height: 70px
       }
@@ -245,7 +250,7 @@ export default function Intro({ queryData }) {
             height: calc(95vh - 0px);
           }
           .captions {
-            width: calc(100vw - 282px);
+            width: calc(100vw - 276px);
           }
         }
         @media (max-width: 991px) {
