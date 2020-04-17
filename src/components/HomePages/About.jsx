@@ -1,7 +1,6 @@
 import React from "react"
 import PortraitImage from "../ImageExports/PortraitImage"
 import { colors } from "../styles/styles"
-
 export default function About() {
   return (
     <>
@@ -46,7 +45,7 @@ export default function About() {
                     with my family.
                     <br />
                     <br />
-                    You can also check out my CV <a href="" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></a>
+                    You can also check out my CV <a href="#" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></a>
                   </p>
                 </div>
               </div>

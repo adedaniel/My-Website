@@ -49,7 +49,7 @@ export default function Clients() {
                         {data.ClientsImages.nodes.map(clientImage => (
                           <div key={clientImage.id} className='col-sm-6 h150 mb-4'>
                             <div className="clientWrapper">
-                              <a target="_blank" href={`https://${clientImage.name}`}>
+                              <a target="_blank" rel="noopener noreferrer" href={`https://${clientImage.name}`}>
                                 <Img
                                   fluid={clientImage.childImageSharp.fluid}
                                   durationFadeIn={800}

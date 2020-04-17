@@ -7,26 +7,18 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { colors } from "./styles/styles"
 import Menubar from "./menubar"
 import "./layout.css"
 
-const Layout = ({ children, makeActive }) => {
+const Layout = ({ children }) => {
 
 
   return (
     <>
-      <Menubar makeActive={makeActive} />
+      <Menubar />
       <div className="content">
         <main>{children}</main>
-        {
-          // <footer>
-          //   © {new Date().getFullYear()}, Built with
-          //   {` `}
-          //   <a href="https://www.gatsbyjs.org">Gatsby</a>
-          // </footer>
-        }
       </div>
       <style jsx>{`
         @media (max-width: 991px) {

@@ -2,8 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { colors } from "../styles/styles"
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
@@ -98,7 +96,6 @@ export default function Technologies() {
                     slidesPerPage={2}
                     animationSpeed={1100}
                     infinite
-                  // infiniteLoop autoPlay interval={1000} verticalSwipe='natural' showThumbs={false} showArrows={false} showIndicators={false} showStatus={false} stopOnHover={false}
 
                   >
                     {data.JavascriptImages.nodes.map(jsImage => (
