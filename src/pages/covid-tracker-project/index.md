@@ -7,7 +7,7 @@ link: "https://covid-updates.netlify.com"
 code: "corvs"
 ---
 
-> I sincerely hope that by the time you are reading this, this pandemic would have ended and life returns back to normal.
+> Please wash your hands and stay safe.
 
 > ## The goal of the entire endeavour was to create a site where anyone can get any information about the Covid-19 status in any country in the world...
 

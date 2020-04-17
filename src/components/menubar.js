@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect, useLayoutEffect } from "react"
 import { colors } from "./styles/styles"
@@ -18,17 +17,9 @@ function useWindowSize() {
   }, [])
   return size
 }
-function Menubar({ makeActive }) {
-  const [width, height] = useWindowSize()
-  const [active, setActive] = useState(makeActive || 1)
+function Menubar() {
+  const [width] = useWindowSize()
   const [topClass, setTopClass] = useState("")
-  /* View in fullscreen */
-  function openFullscreen() {
-    if (document.fullscreenEnabled) {
-      document.documentElement.requestFullscreen();
-      console.log('true');
-    }
-  }
 
 
 
@@ -53,11 +44,11 @@ function Menubar({ makeActive }) {
             className={`navbar navbar-expand-md ${topClass} effect-main tm-1 navbar-light bgColor fixed-top`}
           >
             <div className="container container-s menu-wrap">
-              <a className="navbar-brand" href="#">
+              <div className="navbar-brand">
                 <div className="w50">
                   <LogoImage />
                 </div>
-              </a>
+              </div>
               <input type="checkbox" id="toggler" className="toggler" />
               <div className="hamburger">
                 <div></div>
@@ -72,11 +63,10 @@ function Menubar({ makeActive }) {
 
                       <li
                         className={`mobileSidebarList inactive`}
-                        onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }}
                       >
-                        <a href="/#home">
+                        <a onClick={() => {
+                          document.getElementById("toggler").checked = false
+                        }} href="/#home">
                           <h5>
                             <strong>HOME</strong>
                           </h5>
@@ -84,11 +74,11 @@ function Menubar({ makeActive }) {
                       </li>
                       <li
                         className={`mobileSidebarList inactive`}
-                        onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }}
+
                       >
-                        <a href="/#is">
+                        <a onClick={() => {
+                          document.getElementById("toggler").checked = false
+                        }} href="/#is">
                           <h5>
                             <strong>ABOUT</strong>
                           </h5>
@@ -96,11 +86,11 @@ function Menubar({ makeActive }) {
                       </li>
                       <li
                         className={`mobileSidebarList inactive`}
-                        onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }}
+
                       >
-                        <a href="/#does">
+                        <a onClick={() => {
+                          document.getElementById("toggler").checked = false
+                        }} href="/#does">
                           <h5>
                             <strong>SERVICES</strong>
                           </h5>
@@ -108,11 +98,11 @@ function Menubar({ makeActive }) {
                       </li>
                       <li
                         className={`mobileSidebarList inactive`}
-                        onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }}
+
                       >
-                        <a href="/#uses">
+                        <a onClick={() => {
+                          document.getElementById("toggler").checked = false
+                        }} href="/#uses">
                           <h5>
                             <strong>TECHNOLOGIES</strong>
                           </h5>
@@ -120,11 +110,11 @@ function Menubar({ makeActive }) {
                       </li>
                       <li
                         className={`mobileSidebarList inactive`}
-                        onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }}
+
                       >
-                        <a href="/#made">
+                        <a onClick={() => {
+                          document.getElementById("toggler").checked = false
+                        }} href="/#made">
                           <h5>
                             <strong>PORTFOLIO</strong>
                           </h5>
@@ -132,11 +122,11 @@ function Menubar({ makeActive }) {
                       </li>
                       <li
                         className={`mobileSidebarList inactive`}
-                        onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }}
+
                       >
-                        <a href="/#worked-with">
+                        <a onClick={() => {
+                          document.getElementById("toggler").checked = false
+                        }} href="/#worked-with">
                           <h5>
                             <strong>CLIENTS</strong>
                           </h5>
@@ -144,12 +134,11 @@ function Menubar({ makeActive }) {
                       </li>
                       <li
                         className={`mobileSidebarList`}
-                        onClick={() => {
-                          setActive(7)
-                          document.getElementById("toggler").checked = false
-                        }}
+
                       >
-                        <a href="/#is-waiting">
+                        <a onClick={() => {
+                          document.getElementById("toggler").checked = false
+                        }} href="/#is-waiting">
                           <h5>
                             <strong>CONTACT</strong>
                           </h5>
@@ -160,11 +149,7 @@ function Menubar({ makeActive }) {
                         Theme &nbsp;&nbsp;
                         <ThemeToggler>
                           {({ theme, toggleTheme }) => (
-                            // <input
-                            //   type="checkbox"
-                            //   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                            //   checked={theme === 'dark'}
-                            // />
+
                             <button
                               className="darkModeToggler bgColor"
                               onClick={() => setToggle(theme, toggleTheme)}
@@ -200,7 +185,7 @@ function Menubar({ makeActive }) {
         <LogoImage />
         <h6 className="my-4 textdarkTextGrey">
           Web Developer <br />
-          UI/UX Designer <br />
+          Keyboardist <br />
           Engineering Student <br />
         </h6>
         <hr className="lineGrey" />
@@ -278,11 +263,7 @@ function Menubar({ makeActive }) {
       {width >= 992 ? (
             <ThemeToggler>
               {({ theme, toggleTheme }) => (
-                // <input
-                //   type="checkbox"
-                //   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                //   checked={theme === 'dark'}
-                // />
+
                 <button
                   className="darkModeToggler bgColor"
                   onClick={() => setToggle(theme, toggleTheme)}

@@ -1,16 +1,18 @@
 import React from 'react'
 import { colors } from "./styles/styles"
-import { Link } from "gatsby"
-
 import HNY2Image from './ImageExports/HNY2Image'
 import HNYMainImage from './ImageExports/HNYMainImage'
 import HNY1Image from './ImageExports/HNY1Image'
 import Corvs2Image from './ImageExports/Corvs2Image'
 import CorvsMainImage from './ImageExports/CorvsMainImage'
 import Corvs1Image from './ImageExports/Corvs1Image'
-import Beta2Image from './ImageExports/Beta2Image'
-import BetaMainImage from './ImageExports/BetaMainImage'
-import Beta1Image from './ImageExports/Beta1Image'
+import Portfolio2Image from './ImageExports/Portfolio2Image'
+import PortfolioMainImage from './ImageExports/PortfolioMainImage'
+import Portfolio1Image from './ImageExports/Portfolio1Image'
+import YemiBat2Image from './ImageExports/YemiBat2Image'
+import YemiBatMainImage from './ImageExports/YemiBatMainImage'
+import YemiBat1Image from './ImageExports/YemiBat1Image'
+
 import Button from './button'
 
 export default function ProjectDetails({ html, frontmatter }) {
@@ -29,7 +31,7 @@ export default function ProjectDetails({ html, frontmatter }) {
                         <p className='greyText float-left'>{frontmatter.category}</p>
                         <div className="verticalLine"></div>
                         <p className='greyText float-left'>{frontmatter.date}</p>
-                        <a target='_blank' href={frontmatter.link}>
+                        <a target='_blank' rel="noopener noreferrer" href={frontmatter.link}>
                           <Button text='View Website' radius='40px'
                             width='200px'
                             margin='10px 0'
@@ -65,21 +67,21 @@ export default function ProjectDetails({ html, frontmatter }) {
 
                         : ""}
 
-                      {frontmatter.code === 'beta' ?
+                      {frontmatter.code === 'portfolio' ?
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
                             <div className='gwd-p-1miv'>
-                              <Beta2Image />
+                              <Portfolio2Image />
                             </div>
                           </div>
                           <div className="mainImgWrapper">
                             <div className='gwd-p-1miv'>
-                              <BetaMainImage />
+                              <PortfolioMainImage />
                             </div>
                           </div>
                           <div className="mainImgWrapper image1">
                             <div className='gwd-p-1miv'>
-                              <Beta1Image />
+                              <Portfolio1Image />
                             </div>
                           </div>
 
@@ -108,6 +110,27 @@ export default function ProjectDetails({ html, frontmatter }) {
 
                         : ""}
 
+                      {frontmatter.code === 'yemibat' ?
+                        <div className="captionArea">
+                          <div className="mainImgWrapper image2">
+                            <div className='gwd-p-1miv'>
+                              <YemiBat2Image />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper">
+                            <div className='gwd-p-1miv'>
+                              <YemiBatMainImage />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper image1">
+                            <div className='gwd-p-1miv'>
+                              <YemiBat1Image />
+                            </div>
+                          </div>
+
+                        </div>
+
+                        : ""}
 
                     </div>
                   </div>

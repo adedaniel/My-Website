@@ -1,14 +1,18 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import HNYMainImage from '../ImageExports/HNYMainImage';
 import HNY1Image from '../ImageExports/HNY1Image';
 import HNY2Image from '../ImageExports/HNY2Image';
 import Corvs2Image from '../ImageExports/Corvs2Image'
 import CorvsMainImage from '../ImageExports/CorvsMainImage'
 import Corvs1Image from '../ImageExports/Corvs1Image'
-import Beta2Image from '../ImageExports/Beta2Image'
-import BetaMainImage from '../ImageExports/BetaMainImage'
-import Beta1Image from '../ImageExports/Beta1Image'
+import Portfolio2Image from '../ImageExports/Portfolio2Image'
+import PortfolioMainImage from '../ImageExports/PortfolioMainImage'
+import Portfolio1Image from '../ImageExports/Portfolio1Image'
+import YemiBat2Image from '../ImageExports/YemiBat2Image'
+import YemiBatMainImage from '../ImageExports/YemiBatMainImage'
+import YemiBat1Image from '../ImageExports/YemiBat1Image'
+
 import { colors } from "../styles/styles"
 export default function Portfolio() {
   const data = useStaticQuery(graphql`
@@ -77,21 +81,21 @@ export default function Portfolio() {
 
                       : ""}
 
-                    {project.node.frontmatter.code === 'beta' ?
+                    {project.node.frontmatter.code === 'portfolio' ?
                       <div className="col-md-8">
                         <div className="mainImgWrapper image2">
                           <div className='gwd-p-1miv'>
-                            <Beta2Image />
+                            <Portfolio2Image />
                           </div>
                         </div>
                         <div className="mainImgWrapper">
                           <div className='gwd-p-1miv'>
-                            <BetaMainImage />
+                            <PortfolioMainImage />
                           </div>
                         </div>
                         <div className="mainImgWrapper image1">
                           <div className='gwd-p-1miv'>
-                            <Beta1Image />
+                            <Portfolio1Image />
                           </div>
                         </div>
 
@@ -112,6 +116,27 @@ export default function Portfolio() {
                         <div className="mainImgWrapper image1">
                           <div className='gwd-p-1miv'>
                             <Corvs1Image />
+                          </div>
+                        </div>
+
+                      </div>
+
+                      : ""}
+                    {project.node.frontmatter.code === 'yemibat' ?
+                      <div className="col-md-8">
+                        <div className="mainImgWrapper image2">
+                          <div className='gwd-p-1miv'>
+                            <YemiBat2Image />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper">
+                          <div className='gwd-p-1miv'>
+                            <YemiBatMainImage />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper image1">
+                          <div className='gwd-p-1miv'>
+                            <YemiBat1Image />
                           </div>
                         </div>
 

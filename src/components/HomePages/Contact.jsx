@@ -1,5 +1,4 @@
 import React from 'react'
-import { colors } from "../styles/styles"
 import WithLoveImage from '../ImageExports/WithLoveImage'
 
 export default function Contact({ queryData }) {
@@ -33,7 +32,7 @@ export default function Contact({ queryData }) {
                         <div className="col-md-7">
                           <a className='invNeutral' href={`mailto:${queryData.email}`}><h1 className='contactEmail'>{queryData.email}</h1></a>
                           <div className="contacts">
-                            <a target="_blank" href={queryData.twitter}>
+                            <a target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerTwitterLink">
                                   <div className="hoverIcon">
@@ -48,7 +47,7 @@ export default function Contact({ queryData }) {
                                 </div>
                               </div>
                             </a>
-                            <a target="_blank" href={queryData.linkedin}>
+                            <a target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerLinkedInLink">
                                   <div className="hoverIcon">
@@ -63,7 +62,7 @@ export default function Contact({ queryData }) {
                                 </div>
                               </div>
                             </a>
-                            <a target="_blank" href={queryData.youtube}>
+                            <a target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerYouTubeLink">
                                   <div className="hoverIcon">
@@ -78,7 +77,7 @@ export default function Contact({ queryData }) {
                                 </div>
                               </div>
                             </a>
-                            <a target="_blank" href={queryData.github}>
+                            <a target="_blank" rel="noopener noreferrer" href={queryData.github}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerGithubLink">
                                   <div className="hoverIcon">
@@ -93,7 +92,7 @@ export default function Contact({ queryData }) {
                                 </div>
                               </div>
                             </a>
-                            <a target="_blank" href={queryData.whatsapp}>
+                            <a target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerWhatsappLink">
                                   <div className="hoverIcon">
@@ -116,6 +115,7 @@ export default function Contact({ queryData }) {
 
                           <a
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="invNeutral"
                             href="tel:+2348104172477"
                           >

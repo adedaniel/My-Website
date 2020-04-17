@@ -2,6 +2,7 @@ import React from "react"
 import Typed from "react-typed"
 import { colors } from "../styles/styles"
 import Button from "../button"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default function Intro({ queryData }) {
   return (
@@ -33,7 +34,7 @@ export default function Intro({ queryData }) {
             </h1>
             <hr className="mb-1" />
             <div className="contacts">
-              <a target="_blank" href={queryData.twitter}>
+              <a target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
                 <div className="eachLink d-inline-block">
                   <div className="innerTwitterLink">
                     <div className="hoverIcon">
@@ -48,7 +49,7 @@ export default function Intro({ queryData }) {
                   </div>
                 </div>
               </a>
-              <a target="_blank" href={queryData.linkedin}>
+              <a target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
                 <div className="eachLink d-inline-block">
                   <div className="innerLinkedInLink">
                     <div className="hoverIcon">
@@ -63,7 +64,7 @@ export default function Intro({ queryData }) {
                   </div>
                 </div>
               </a>
-              <a target="_blank" href={queryData.youtube}>
+              <a target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
                 <div className="eachLink d-inline-block">
                   <div className="innerYouTubeLink">
                     <div className="hoverIcon">
@@ -78,7 +79,7 @@ export default function Intro({ queryData }) {
                   </div>
                 </div>
               </a>
-              <a target="_blank" href={queryData.github}>
+              <a target="_blank" rel="noopener noreferrer" href={queryData.github}>
                 <div className="eachLink d-inline-block">
                   <div className="innerGithubLink">
                     <div className="hoverIcon">
@@ -93,7 +94,7 @@ export default function Intro({ queryData }) {
                   </div>
                 </div>
               </a>
-              <a target="_blank" href={queryData.whatsapp}>
+              <a target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
                 <div className="eachLink d-inline-block">
                   <div className="innerWhatsappLink">
                     <div className="hoverIcon">
@@ -109,13 +110,15 @@ export default function Intro({ queryData }) {
                 </div>
               </a>
             </div>
-
-            <a href={`mailto:${queryData.email}`}>
+            <OutboundLink href={`mailto:${queryData.email}`}>
               <Button text='Get in Touch' radius='40px'
                 width='260px'
                 margin='10px 0'
                 height='55px' />
-            </a>
+
+            </OutboundLink>
+
+
           </div>
         </div>
         <div className="text-center arrow w-100">

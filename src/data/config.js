@@ -1,6 +1,6 @@
 module.exports = {
   defaultTitle: "adedaniel",
-  logo: "../images/adedaniel's-logo.png",
+  logo: "../images/blue-logo.png",
   icon: "../images/adedaniel's-icon.png",
   author: "adedaniel",
   url: "https://adedaniel.com",
@@ -15,7 +15,7 @@ module.exports = {
     facebook: "https://www.facebook.com/daniel.adetola.3",
     whatsapp: "https://wa.me/2348104172477"
   },
-  // googleAnalyticsID: "UA-88875900-4",
+  googleAnalyticsID: "UA-163859000-1",
   themeColor: "#61dafb",
   backgroundColor: "#10161b",
   social: {
