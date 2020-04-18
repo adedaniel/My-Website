@@ -10,16 +10,35 @@ import PropTypes from "prop-types"
 import { colors } from "./styles/styles"
 import Menubar from "./menubar"
 import "./layout.css"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import { Provider } from "../components/Context";
 
 const Layout = ({ children }) => {
-
+  const setToggle = (theme, toggleTheme) => {
+    theme === "light" ? toggleTheme("dark") : toggleTheme("light")
+  }
 
   return (
     <>
-      <Menubar />
-      <div className="content">
-        <main>{children}</main>
-      </div>
+      <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <>
+            <Provider
+              value={{
+                theme: theme,
+                setToggle: () => setToggle(theme, toggleTheme)
+              }}
+            >
+              <Menubar />
+              <div className="content">
+                <main>{children}</main>
+              </div>
+            </Provider>
+
+          </>
+        )}
+      </ThemeToggler>
+
       <style jsx>{`
         @media (max-width: 991px) {
           .content {

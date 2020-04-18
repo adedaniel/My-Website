@@ -1,25 +1,14 @@
 import PropTypes from "prop-types"
-import React, { useState, useEffect, useLayoutEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { colors } from "./styles/styles"
 import Scrollspy from 'react-scrollspy'
 import LogoImage from "./ImageExports/LogoImage"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0])
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight])
-    }
-    window.addEventListener("resize", updateSize)
-    updateSize()
-    return () => window.removeEventListener("resize", updateSize)
-  }, [])
-  return size
-}
-function Menubar() {
-  const [width] = useWindowSize()
-  const [topClass, setTopClass] = useState("")
+import MyContext from "./Context";
 
+
+function Menubar() {
+  const [topClass, setTopClass] = useState("")
+  const { theme, setToggle } = useContext(MyContext);
 
 
   useEffect(() => {
@@ -32,9 +21,9 @@ function Menubar() {
     })
   }, [])
 
-  const setToggle = (theme, toggleTheme) => {
-    theme === "light" ? toggleTheme("dark") : toggleTheme("light")
-  }
+  // const setToggle = (theme, toggleTheme) => {
+  //   theme === "light" ? toggleTheme("dark") : toggleTheme("light")
+  // }
   return (
     <>
       <div className="navbar">
@@ -115,7 +104,7 @@ function Menubar() {
                           document.getElementById("toggler").checked = false
                         }} href="/#made">
                           <h5>
-                            <strong>PORTFOLIO</strong>
+                            <strong>PROJECTS</strong>
                           </h5>
                         </a>
                       </li>
@@ -146,12 +135,10 @@ function Menubar() {
                       <hr className="lineGrey" />
                       <h5 className="textGrey">
                         Theme &nbsp;&nbsp;
-                        <ThemeToggler>
-                          {({ theme, toggleTheme }) => (
-
+                        
                             <button
                               className="darkModeToggler bgColor"
-                              onClick={() => setToggle(theme, toggleTheme)}
+                              onClick={() => setToggle()}
                             >
                               {theme === "light" ? (
                                 <i
@@ -165,8 +152,7 @@ function Menubar() {
                                   ></i>
                                 )}
                             </button>
-                          )}
-                        </ThemeToggler>
+                         
                       </h5>
 
 
@@ -259,13 +245,10 @@ function Menubar() {
         <hr className="lineGrey" />
         <h5 className="textGrey">
           Theme &nbsp;&nbsp;
-      {width >= 992 ? (
-            <ThemeToggler>
-              {({ theme, toggleTheme }) => (
-
-                <button
+      
+            <button
                   className="darkModeToggler bgColor"
-                  onClick={() => setToggle(theme, toggleTheme)}
+                  onClick={() => setToggle()}
                 >
                   {theme === "light" ? (
                     <i
@@ -279,11 +262,8 @@ function Menubar() {
                       ></i>
                     )}
                 </button>
-              )}
-            </ThemeToggler>
-          ) : (
-              ""
-            )}
+              
+          
         </h5>
 
 

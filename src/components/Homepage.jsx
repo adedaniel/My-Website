@@ -28,7 +28,7 @@ export default function HomePage() {
   const queryData = data.site.siteMetadata
 
   return (
-    <div data-spy="scroll" data-target="menu" data-offset="0">
+    <>
       <Intro queryData={queryData} />
       <About />
       <Services />
@@ -37,6 +37,6 @@ export default function HomePage() {
       <Clients />
       <Contact queryData={queryData} />
 
-    </div>
+    </>
   )
 }
