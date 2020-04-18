@@ -1,7 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
-import { colors } from "../styles/styles"
 import BackgroundImage from "gatsby-background-image"
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -14,10 +12,10 @@ import BackgroundImage from "gatsby-background-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const NotFoundImageBackground = ({ children }) => {
+const BGImageDarkBackground = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "404-image.png" }) {
+      placeholderImage: file(relativePath: { eq: "bg-dark-image.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG 
@@ -32,12 +30,15 @@ const NotFoundImageBackground = ({ children }) => {
       Tag="section"
       // className={className}
       fluid={data.placeholderImage.childImageSharp.fluid}
-      backgroundColor={colors.white}
+      // backgroundColor={colors.transparent}
       fadeIn={`soft`}
+
       style={{
-        backgroundPosition: "left",
+        backgroundPosition: "right",
         backgroundColor: 'transparent',
-        backgroundSize: '60%'
+        backgroundSize: 'auto',
+        backgroundAttachment: 'fixed'
+
       }}
     >
       {children}
@@ -45,4 +46,4 @@ const NotFoundImageBackground = ({ children }) => {
   )
 }
 
-export default NotFoundImageBackground
+export default BGImageDarkBackground

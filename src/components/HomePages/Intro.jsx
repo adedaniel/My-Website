@@ -1,136 +1,188 @@
-import React from "react"
+import React, { useContext } from "react"
 import Typed from "react-typed"
 import { colors } from "../styles/styles"
 import Button from "../button"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import BGImageBackground from "../ImageExports/BGImageBackground"
+import BGImageDarkBackground from "../ImageExports/BGImageDarkBackground"
+import MyContext from "../Context";
 
 export default function Intro({ queryData }) {
+  const { theme } = useContext(MyContext);
   return (
-    <div>
-      <div className=" w-100 bgColor" id="home">
-        <div className=" vh100 d-table-cell vAlign ">
-          <div className="container captions">
-            <div className="typeWrapper">
-              <h1 className="textColor fontTwo">
-
-                <strong className="font-weight-bold">
-                  <span className=" biggerText">
-                    <Typed
-                      strings={[
-                        "ENGINEER <br/> BY PROFESSION",
-                        "DEVELOPER <br/> BY PASSION",
-                        "I AM <br/> ADEDANIEL^5000",
-                      ]}
-                      typeSpeed={70}
-                      backSpeed={30}
-                      // fadeOut='true'
-                      // fadeOutDelay={500}
-                      backDelay={2000}
-                      smartBackspace={true}
-                      cursorChar={"_"}
-                      loop={true}
-                    />
-                  </span>
-                </strong>
-              </h1>
-            </div>
-            <hr className="mb-1" />
-            <div className="contacts">
-              <a target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
-                <div className="eachLink d-inline-block">
-                  <div className="innerTwitterLink">
-                    <div className="hoverIcon">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </div>
-                    <div className=" hoverIcon">
-                      <i
-                        className="fa fa-twitter text-white"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
-                <div className="eachLink d-inline-block">
-                  <div className="innerLinkedInLink">
-                    <div className="hoverIcon">
-                      <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div className=" hoverIcon">
-                      <i
-                        className="fa fa-linkedin text-white"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
-                <div className="eachLink d-inline-block">
-                  <div className="innerYouTubeLink">
-                    <div className="hoverIcon">
-                      <i className="fa fa-youtube" aria-hidden="true"></i>
-                    </div>
-                    <div className=" hoverIcon">
-                      <i
-                        className="fa fa-youtube text-white"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href={queryData.github}>
-                <div className="eachLink d-inline-block">
-                  <div className="innerGithubLink">
-                    <div className="hoverIcon">
-                      <i className="fa fa-github" aria-hidden="true"></i>
-                    </div>
-                    <div className=" hoverIcon">
-                      <i
-                        className="fa fa-github text-white"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
-                <div className="eachLink d-inline-block">
-                  <div className="innerWhatsappLink">
-                    <div className="hoverIcon">
-                      <i className="fa fa-whatsapp" aria-hidden="true"></i>
-                    </div>
-                    <div className=" hoverIcon">
-                      <i
-                        className="fa fa-whatsapp text-white"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <OutboundLink href={`mailto:${queryData.email}`}>
-              <Button text='Get in Touch' radius='40px'
-                width='260px'
-                margin='10px 0'
-                height='55px' />
-
-            </OutboundLink>
+    <>
+      <div className='bgColor'>
+        <div className='w-100 backgroundCover'>
 
 
-          </div>
-        </div>
-        <div className="text-center arrow w-100">
-          <div className="animated infinite bounce slow">
-            <i className="fa fa-angle-down angles" aria-hidden="true"></i>
-          </div>
+          {theme === 'dark' ? (
+            <BGImageDarkBackground>
+              <div>
+                <div className=" w-100">
+                  <div className=" bg-vh100 d-table-cell vAlign ">
+
+                  </div>
+
+                </div>
+                <div></div>
+              </div>
+
+            </BGImageDarkBackground>
+
+          ) : (
+              <BGImageBackground>
+                <div>
+                  <div className=" w-100">
+                    <div className=" bg-vh100 d-table-cell vAlign ">
+
+                    </div>
+
+                  </div>
+                  <div></div>
+                </div>
+
+              </BGImageBackground>
+
+            )
+          }
+
         </div>
       </div>
-      <div></div>
+      <div className='overLay'>
+        <div className=" w-100" id="home">
+          <div className=" vh100 d-table-cell vAlign ">
+            <div className="container captions">
+              <div className="typeWrapper">
+                <h1 className="textColor fontTwo">
+
+                  <strong className="font-weight-bold">
+                    <span className=" biggerText">
+                      <Typed
+                        strings={[
+                          "ENGINEER <br/> BY PROFESSION",
+                          "DEVELOPER <br/> BY PASSION",
+                          "I AM <br/> ADEDANIEL^5000",
+                        ]}
+                        typeSpeed={70}
+                        backSpeed={30}
+                        // fadeOut='true'
+                        // fadeOutDelay={500}
+                        backDelay={2000}
+                        smartBackspace={true}
+                        cursorChar={"_"}
+                        loop={true}
+                      />
+                    </span>
+                  </strong>
+                </h1>
+              </div>
+              <hr className="m-0" />
+              <div className="contacts">
+                <a target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
+                  <div className="eachLink d-inline-block">
+                    <div className="innerTwitterLink">
+                      <div className="hoverIcon">
+                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                      </div>
+                      <div className=" hoverIcon">
+                        <i
+                          className="fa fa-twitter text-white"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
+                  <div className="eachLink d-inline-block">
+                    <div className="innerLinkedInLink">
+                      <div className="hoverIcon">
+                        <i className="fa fa-linkedin" aria-hidden="true"></i>
+                      </div>
+                      <div className=" hoverIcon">
+                        <i
+                          className="fa fa-linkedin text-white"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
+                  <div className="eachLink d-inline-block">
+                    <div className="innerYouTubeLink">
+                      <div className="hoverIcon">
+                        <i className="fa fa-youtube" aria-hidden="true"></i>
+                      </div>
+                      <div className=" hoverIcon">
+                        <i
+                          className="fa fa-youtube text-white"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href={queryData.github}>
+                  <div className="eachLink d-inline-block">
+                    <div className="innerGithubLink">
+                      <div className="hoverIcon">
+                        <i className="fa fa-github" aria-hidden="true"></i>
+                      </div>
+                      <div className=" hoverIcon">
+                        <i
+                          className="fa fa-github text-white"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
+                  <div className="eachLink d-inline-block">
+                    <div className="innerWhatsappLink">
+                      <div className="hoverIcon">
+                        <i className="fa fa-whatsapp" aria-hidden="true"></i>
+                      </div>
+                      <div className=" hoverIcon">
+                        <i
+                          className="fa fa-whatsapp text-white"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <OutboundLink href={`mailto:${queryData.email}`}>
+                <Button text='Get in Touch' radius='40px'
+                  width='260px'
+                  margin='10px 0'
+                  height='55px' />
+
+              </OutboundLink>
+
+
+            </div>
+
+          </div>
+          <div className="text-center arrow w-100">
+            <div className="animated infinite bounce slow">
+              <i className="fa fa-angle-down angles" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+
       <style jsx>{`
+      .overLay{
+        margin-top: -93.6vh;
+        position: absolute
+      }
+      .backgroundCover{
+        opacity: 0.05
+      }
       .typeWrapper{
         height: 150px
       }
@@ -229,15 +281,19 @@ export default function Intro({ queryData }) {
         .vh100 {
           height: calc(95vh - 80px);
         }
+        .bg-vh100 {
+          height: calc(95vh - 7px);
+        }
+        
         .captions {
           width: calc(100vw - 0px);
         }
         @media (min-width: 1069px) {
           .fontTwo {
-            font-size: 10vh;
+            font-size: 9vh;
           }
           .captions {
-            padding: 0px 13%;
+            padding: 0px 3%;
           }
         }
         @media (min-width: 768px) and (max-width: 1068px) {
@@ -249,6 +305,12 @@ export default function Intro({ queryData }) {
           .vh100 {
             height: calc(95vh - 0px);
           }
+          .bg-vh100 {
+            height: calc(100vh - 0px);
+          }
+          .overLay{
+            margin-top: -101.6vh;
+          }
           .captions {
             width: calc(100vw - 276px);
           }
@@ -257,12 +319,19 @@ export default function Intro({ queryData }) {
           .vAlign {
             width: 100vw;
           }
+          .typeWrapper{
+            height: 140px
+          }
         }
         @media (max-width: 767px) {
           .fontTwo {
             font-size: 5vh;
           }
+          .typeWrapper{
+            height: 86px
+          }
         }
+       
         .textColor {
           color: var(--inverseNeutral);
         }
@@ -294,6 +363,7 @@ export default function Intro({ queryData }) {
           color: var(--inverseNeutral);
         }
       `}</style>
-    </div>
+
+    </>
   )
 }

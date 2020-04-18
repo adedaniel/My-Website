@@ -12,7 +12,7 @@ import Portfolio1Image from '../ImageExports/Portfolio1Image'
 import YemiBat2Image from '../ImageExports/YemiBat2Image'
 import YemiBatMainImage from '../ImageExports/YemiBatMainImage'
 import YemiBat1Image from '../ImageExports/YemiBat1Image'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+// import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { colors } from "../styles/styles"
 export default function Portfolio() {
@@ -41,15 +41,13 @@ export default function Portfolio() {
     <>
       <div className="pt-1 bgColor">
         <div className="text-center py-5" id="made">
-          <h1 className="mb-1 bgGrey mt20">Portfolio</h1>
+          <h1 className="mb-1 bgGrey mt20">Projects</h1>
           <div className="lineWrapper mb-4">
             <div className="innerLine"></div>
           </div>
           {data.allMarkdownRemark.edges.map(project => (
             <div key={project.node.id} className="eachProjectList my-5">
-              <AniLink className='text-decoration-none' cover direction="left"
-                bg='var(--bgGrey)' to={project.node.frontmatter.path}
-                duration={1}
+              <a className='text-decoration-none' href={project.node.frontmatter.path}
               >
                 <div className="container my-5">
                   <div className="row text-left portfolioWrapper py5 pl5 bgPrimaryGrey">
@@ -149,7 +147,7 @@ export default function Portfolio() {
                       : ""}
                   </div>
                 </div>
-              </AniLink>
+              </a>
             </div>
           ))}
           <div className="container text-left extra  mt-5">

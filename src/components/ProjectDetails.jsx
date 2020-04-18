@@ -12,7 +12,6 @@ import Portfolio1Image from './ImageExports/Portfolio1Image'
 import YemiBat2Image from './ImageExports/YemiBat2Image'
 import YemiBatMainImage from './ImageExports/YemiBatMainImage'
 import YemiBat1Image from './ImageExports/YemiBat1Image'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Button from './button'
 
 export default function ProjectDetails({ html, frontmatter }) {
@@ -146,14 +145,12 @@ export default function ProjectDetails({ html, frontmatter }) {
         <div className="container">
           <div className='invNeutral details'>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <AniLink className='text-decoration-none' cover direction="right"
-              bg='var(--bgGrey)' to='/#made'
-              duration={1}
+            <a className='text-decoration-none' href='/#made'
             >
               <h5 className="invNeutral text-center my-5">
                 <span className="hoverEffect">View other projects</span>
               </h5>
-            </AniLink>
+            </a>
           </div>
         </div>
       </div>

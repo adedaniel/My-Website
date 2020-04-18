@@ -1,44 +1,43 @@
 import React from 'react'
-import { colors } from "./styles/styles"
 import NotFoundImageBackground from './ImageExports/NotFoundImageBackground'
 import Button from './button'
 
 export default function InexistingPage() {
-    return (
-        <div className="bgColor">
-            <NotFoundImageBackground>
-                <div className="contentWrapper">
-                    <div className=" w-100 container ">
-                        <div className="" >
-                            <div className="container  invNeutral">
-                                <div className="row">
-                                    <div className="col-sm-6">
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <div className="d-table captionParent hImage">
-                                            <div className="captionArea captionPadding">
-                                                <h1 className='caption'>Uh oh...</h1>
-                                                <h4>This route doesn't exist... at least for now </h4>
-                                                <a href="/#">
-                                                    <Button text='Go Home' radius='40px'
-                                                        width='260px'
-                                                        margin='10px 0'
-                                                        height='55px' />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+  return (
+    <div className="bgColor">
+      <NotFoundImageBackground>
+        <div className="contentWrapper">
+          <div className=" w-100 container ">
+            <div className="" >
+              <div className="container  invNeutral">
+                <div className="row">
+                  <div className="col-sm-6">
+                  </div>
+                  <div className="col-sm-6">
+                    <div className="d-table captionParent hImage">
+                      <div className="captionArea captionPadding">
+                        <h1 className='caption'>Uh oh...</h1>
+                        <h4>This route doesn't exist... at least for now </h4>
+                        <a href="/#">
+                          <Button text='Go Home' radius='40px'
+                            width='260px'
+                            margin='10px 0'
+                            height='55px' />
+                        </a>
+                      </div>
                     </div>
+                  </div>
                 </div>
 
-            </NotFoundImageBackground>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <style jsx>
-                {`
+      </NotFoundImageBackground>
+
+      <style jsx>
+        {`
                 .contentWrapper{
                     background-color: transparent
                 
@@ -114,8 +113,8 @@ export default function InexistingPage() {
     
             
             `}
-            </style>
-        </div>
+      </style>
+    </div>
 
-    )
+  )
 }
