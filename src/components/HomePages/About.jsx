@@ -1,6 +1,7 @@
 import React from "react"
 import PortraitImage from "../ImageExports/PortraitImage"
 import { colors } from "../styles/styles"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 export default function About() {
   return (
     <>
@@ -45,7 +46,7 @@ export default function About() {
                     with my family.
                     <br />
                     <br />
-                    You can also check out my CV <a href="#" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></a>
+                    You can also check out my CV <OutboundLink href="#" target="_blank" rel="noopener noreferrer" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></OutboundLink>
                   </p>
                 </div>
               </div>
@@ -93,6 +94,10 @@ export default function About() {
           transition: all 0.5s;
         }
         .hoverEffect:hover {
+          background-size: 9px 80px;
+          color: var(--inverseNeutral);
+        }
+        .hoverSmallEffect:hover {
           background-size: 9px 80px;
           color: var(--inverseNeutral);
         }

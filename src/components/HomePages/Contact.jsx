@@ -1,5 +1,6 @@
 import React from 'react'
 import WithLoveImage from '../ImageExports/WithLoveImage'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export default function Contact({ queryData }) {
   return (
@@ -33,7 +34,7 @@ export default function Contact({ queryData }) {
                         <div className="col-md-7">
                           <a className='invNeutral' href={`mailto:${queryData.email}`}><h1 className='contactEmail'>{queryData.email}</h1></a>
                           <div className="contacts">
-                            <a target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
+                            <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerTwitterLink">
                                   <div className="hoverIcon">
@@ -47,8 +48,8 @@ export default function Contact({ queryData }) {
                                   </div>
                                 </div>
                               </div>
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
+                            </OutboundLink>
+                            <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerLinkedInLink">
                                   <div className="hoverIcon">
@@ -62,8 +63,8 @@ export default function Contact({ queryData }) {
                                   </div>
                                 </div>
                               </div>
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
+                            </OutboundLink>
+                            <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerYouTubeLink">
                                   <div className="hoverIcon">
@@ -77,8 +78,8 @@ export default function Contact({ queryData }) {
                                   </div>
                                 </div>
                               </div>
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" href={queryData.github}>
+                            </OutboundLink>
+                            <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.github}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerGithubLink">
                                   <div className="hoverIcon">
@@ -92,8 +93,8 @@ export default function Contact({ queryData }) {
                                   </div>
                                 </div>
                               </div>
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
+                            </OutboundLink>
+                            <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
                               <div className="eachLink d-inline-block">
                                 <div className="innerWhatsappLink">
                                   <div className="hoverIcon">
@@ -107,7 +108,7 @@ export default function Contact({ queryData }) {
                                   </div>
                                 </div>
                               </div>
-                            </a>
+                            </OutboundLink>
                           </div>
 
 

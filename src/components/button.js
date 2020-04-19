@@ -1,7 +1,7 @@
 import React from 'react'
 import { colors } from "./styles/styles"
 
-export default function Button({ text, font, width, height, margin, radius }) {
+export default function Button({ text, font, width, height, margin, radius, display }) {
   return (
     <>
       <button className="fourth outlinedButton">{text}</button>
@@ -10,6 +10,7 @@ export default function Button({ text, font, width, height, margin, radius }) {
     background-color: transparent;
     border: 2px solid ${colors.primary};
     width: ${width || 'auto'};
+    display: ${display || 'initial'};
     margin: ${margin || 'auto'};
     height: ${height || 'auto'};
     border-radius: ${radius || '40px'};
