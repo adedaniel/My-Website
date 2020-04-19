@@ -13,6 +13,7 @@ import YemiBat2Image from './ImageExports/YemiBat2Image'
 import YemiBatMainImage from './ImageExports/YemiBatMainImage'
 import YemiBat1Image from './ImageExports/YemiBat1Image'
 import Button from './button'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export default function ProjectDetails({ html, frontmatter }) {
   return (
@@ -30,14 +31,15 @@ export default function ProjectDetails({ html, frontmatter }) {
                         <p className='greyText float-left'>{frontmatter.category}</p>
                         <div className="verticalLine"></div>
                         <p className='greyText float-left'>{frontmatter.date}</p>
-                        <a target='_blank' rel="noopener noreferrer" href={frontmatter.link}>
+                        <OutboundLink className='text-decoration-none' target='_blank' rel="noopener noreferrer" href={frontmatter.link}>
                           <Button text='View Website' radius='40px'
                             width='200px'
+                            display='block'
                             margin='10px 0'
                             height='50px'
                             font='18px'
                           />
-                        </a>
+                        </OutboundLink>
                       </div>
                     </div>
                   </div>

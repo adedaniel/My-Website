@@ -9,7 +9,7 @@ code: "corvs"
 
 > Please wash your hands and stay safe.
 
-> ## The goal of the entire endeavour was to create a site where anyone can get any information about the Covid-19 status in any country in the world...
+> ### The goal of the entire endeavour was to create a site where anyone can get any information about the Covid-19 status in any country in the world...
 
  <br/>
 

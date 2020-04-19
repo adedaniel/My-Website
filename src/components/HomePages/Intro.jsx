@@ -63,7 +63,7 @@ export default function Intro({ queryData }) {
                           "DEVELOPER <br/> BY PASSION",
                           "I AM <br/> ADEDANIEL^5000",
                         ]}
-                        typeSpeed={70}
+                        typeSpeed={50}
                         backSpeed={30}
                         // fadeOut='true'
                         // fadeOutDelay={500}
@@ -78,7 +78,7 @@ export default function Intro({ queryData }) {
               </div>
               <hr className="m-0" />
               <div className="contacts">
-                <a target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
+                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
                   <div className="eachLink d-inline-block">
                     <div className="innerTwitterLink">
                       <div className="hoverIcon">
@@ -92,8 +92,8 @@ export default function Intro({ queryData }) {
                       </div>
                     </div>
                   </div>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
+                </OutboundLink>
+                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
                   <div className="eachLink d-inline-block">
                     <div className="innerLinkedInLink">
                       <div className="hoverIcon">
@@ -107,8 +107,8 @@ export default function Intro({ queryData }) {
                       </div>
                     </div>
                   </div>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
+                </OutboundLink>
+                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
                   <div className="eachLink d-inline-block">
                     <div className="innerYouTubeLink">
                       <div className="hoverIcon">
@@ -122,8 +122,8 @@ export default function Intro({ queryData }) {
                       </div>
                     </div>
                   </div>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href={queryData.github}>
+                </OutboundLink>
+                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.github}>
                   <div className="eachLink d-inline-block">
                     <div className="innerGithubLink">
                       <div className="hoverIcon">
@@ -137,8 +137,8 @@ export default function Intro({ queryData }) {
                       </div>
                     </div>
                   </div>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
+                </OutboundLink>
+                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
                   <div className="eachLink d-inline-block">
                     <div className="innerWhatsappLink">
                       <div className="hoverIcon">
@@ -152,7 +152,7 @@ export default function Intro({ queryData }) {
                       </div>
                     </div>
                   </div>
-                </a>
+                </OutboundLink>
               </div>
               <OutboundLink href={`mailto:${queryData.email}`}>
                 <Button text='Get in Touch' radius='40px'
