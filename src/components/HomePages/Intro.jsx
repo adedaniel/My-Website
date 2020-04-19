@@ -279,7 +279,7 @@ export default function Intro({ queryData }) {
           display: block;
         }
         .vh100 {
-          height: calc(95vh - 80px);
+          height: calc(95vh - 110px);
         }
         .bg-vh100 {
           height: calc(95vh - 7px);
