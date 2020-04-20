@@ -46,7 +46,7 @@ export default function About() {
                     with my family.
                     <br />
                     <br />
-                    You can also check out my CV <OutboundLink href="#" target="_blank" rel="noopener noreferrer" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></OutboundLink>
+                    You can also check out my CV <OutboundLink href="https://drive.google.com/file/d/1jamgoLP7gDvO2IF9bH0vf9d2WzcOe0mA/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></OutboundLink>
                   </p>
                 </div>
               </div>

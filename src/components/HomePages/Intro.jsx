@@ -78,7 +78,7 @@ export default function Intro({ queryData }) {
               </div>
               <hr className="m-0" />
               <div className="contacts">
-                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
+                <OutboundLink className='text-decoration-none' target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
                   <div className="eachLink d-inline-block">
                     <div className="innerTwitterLink">
                       <div className="hoverIcon">
@@ -312,7 +312,7 @@ export default function Intro({ queryData }) {
             margin-top: -101.6vh;
           }
           .captions {
-            width: calc(100vw - 276px);
+            width: calc(100vw - 282px);
           }
         }
         @media (max-width: 991px) {
