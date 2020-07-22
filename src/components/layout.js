@@ -11,7 +11,7 @@ import { colors } from "./styles/styles"
 import Menubar from "./menubar"
 import "./layout.css"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { Provider } from "../components/Context";
+import { Provider } from "../components/Context"
 
 const Layout = ({ children }) => {
   const setToggle = (theme, toggleTheme) => {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
             <Provider
               value={{
                 theme: theme,
-                setToggle: () => setToggle(theme, toggleTheme)
+                setToggle: () => setToggle(theme, toggleTheme),
               }}
             >
               <Menubar />
@@ -34,7 +34,6 @@ const Layout = ({ children }) => {
                 <main>{children}</main>
               </div>
             </Provider>
-
           </>
         )}
       </ThemeToggler>
@@ -54,6 +53,9 @@ const Layout = ({ children }) => {
         }
       `}</style>
       <style jsx global>{`
+        html {
+          scroll-behavior: smooth;
+        }
         body {
           --bg: ${colors.white};
           --textNormal: #222;

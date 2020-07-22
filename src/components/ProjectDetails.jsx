@@ -1,43 +1,57 @@
-import React from 'react'
+import React from "react"
 import { colors } from "./styles/styles"
-import HNY2Image from './ImageExports/HNY2Image'
-import HNYMainImage from './ImageExports/HNYMainImage'
-import HNY1Image from './ImageExports/HNY1Image'
-import Corvs2Image from './ImageExports/Corvs2Image'
-import CorvsMainImage from './ImageExports/CorvsMainImage'
-import Corvs1Image from './ImageExports/Corvs1Image'
-import Portfolio2Image from './ImageExports/Portfolio2Image'
-import PortfolioMainImage from './ImageExports/PortfolioMainImage'
-import Portfolio1Image from './ImageExports/Portfolio1Image'
-import YemiBat2Image from './ImageExports/YemiBat2Image'
-import YemiBatMainImage from './ImageExports/YemiBatMainImage'
-import YemiBat1Image from './ImageExports/YemiBat1Image'
-import Button from './button'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import HNY2Image from "./ImageExports/HNY2Image"
+import HNYMainImage from "./ImageExports/HNYMainImage"
+import HNY1Image from "./ImageExports/HNY1Image"
+import Corvs2Image from "./ImageExports/Corvs2Image"
+import CorvsMainImage from "./ImageExports/CorvsMainImage"
+import Corvs1Image from "./ImageExports/Corvs1Image"
+import Portfolio2Image from "./ImageExports/Portfolio2Image"
+import PortfolioMainImage from "./ImageExports/PortfolioMainImage"
+import Portfolio1Image from "./ImageExports/Portfolio1Image"
+import YemiBat2Image from "./ImageExports/YemiBat2Image"
+import YemiBatMainImage from "./ImageExports/YemiBatMainImage"
+import YemiBat1Image from "./ImageExports/YemiBat1Image"
+import Basemailer2Image from "./ImageExports/Basemailer2Image"
+import BasemailerMainImage from "./ImageExports/BasemailerMainImage"
+import Basemailer1Image from "./ImageExports/Basemailer1Image"
+import Button from "./button"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default function ProjectDetails({ html, frontmatter }) {
   return (
     <div>
       <div>
-        <div className='overflow-hidden bg'>
-          <div className='container '>
+        <div className="overflow-hidden bg">
+          <div className="container ">
             <div className="vh100">
               <div className="container">
                 <div className="row">
                   <div className="col-md-4 pl-4 overflow-hidden">
                     <div className=" vh100 d-table-cell vAlign ">
                       <div className="captions">
-                        <h1 className='h1 invNeutral'>{frontmatter.title}</h1>
-                        <p className='greyText float-left'>{frontmatter.category}</p>
+                        <h1 className="h1 invNeutral">{frontmatter.title}</h1>
+                        <p className="greyText float-left">
+                          {frontmatter.category}
+                        </p>
                         <div className="verticalLine"></div>
-                        <p className='greyText float-left'>{frontmatter.date}</p>
-                        <OutboundLink className='text-decoration-none' target='_blank' rel="noopener noreferrer" href={frontmatter.link}>
-                          <Button text='View Website' radius='40px'
-                            width='200px'
-                            display='block'
-                            margin='10px 0'
-                            height='50px'
-                            font='18px'
+                        <p className="greyText float-left">
+                          {frontmatter.date}
+                        </p>
+                        <OutboundLink
+                          className="text-decoration-none"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={frontmatter.link}
+                        >
+                          <Button
+                            text="View Website"
+                            radius="40px"
+                            width="200px"
+                            display="block"
+                            margin="10px 0"
+                            height="50px"
+                            font="18px"
                           />
                         </OutboundLink>
                       </div>
@@ -45,110 +59,117 @@ export default function ProjectDetails({ html, frontmatter }) {
                   </div>
                   <div className="col-md-8 d-table captionParent hImage">
                     <div className="captionArea">
-
-                      {frontmatter.code === 'hny' ?
+                      {frontmatter.code === "basemailer" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
+                              <Basemailer2Image />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper">
+                            <div className="gwd-p-1miv">
+                              <BasemailerMainImage />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper image1">
+                            <div className="gwd-p-1miv">
+                              <Basemailer1Image />
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {frontmatter.code === "hny" && (
+                        <div className="captionArea">
+                          <div className="mainImgWrapper image2">
+                            <div className="gwd-p-1miv">
                               <HNY2Image />
                             </div>
                           </div>
                           <div className="mainImgWrapper">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <HNYMainImage />
                             </div>
                           </div>
                           <div className="mainImgWrapper image1">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <HNY1Image />
                             </div>
                           </div>
-
                         </div>
+                      )}
 
-                        : ""}
-
-                      {frontmatter.code === 'portfolio' ?
+                      {frontmatter.code === "portfolio" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <Portfolio2Image />
                             </div>
                           </div>
                           <div className="mainImgWrapper">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <PortfolioMainImage />
                             </div>
                           </div>
                           <div className="mainImgWrapper image1">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <Portfolio1Image />
                             </div>
                           </div>
-
                         </div>
-
-                        : ""}
-                      {frontmatter.code === 'corvs' ?
+                      )}
+                      {frontmatter.code === "corvs" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <Corvs2Image />
                             </div>
                           </div>
                           <div className="mainImgWrapper">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <CorvsMainImage />
                             </div>
                           </div>
                           <div className="mainImgWrapper image1">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <Corvs1Image />
                             </div>
                           </div>
-
                         </div>
+                      )}
 
-                        : ""}
-
-                      {frontmatter.code === 'yemibat' ?
+                      {frontmatter.code === "yemibat" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <YemiBat2Image />
                             </div>
                           </div>
                           <div className="mainImgWrapper">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <YemiBatMainImage />
                             </div>
                           </div>
                           <div className="mainImgWrapper image1">
-                            <div className='gwd-p-1miv'>
+                            <div className="gwd-p-1miv">
                               <YemiBat1Image />
                             </div>
                           </div>
-
                         </div>
-
-                        : ""}
-
+                      )}
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>
       <div className="bgPrimaryGrey py-5 ">
         <div className="container">
-          <div className='invNeutral details'>
+          <div className="invNeutral details">
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <a className='text-decoration-none' href='/#made'
-            >
+            <a className="text-decoration-none" href="/#made">
               <h5 className="invNeutral text-center my-5">
                 <span className="hoverEffect">View other projects</span>
               </h5>
@@ -356,6 +377,6 @@ export default function ProjectDetails({ html, frontmatter }) {
         }
         `}
       </style>
-    </div >
+    </div>
   )
 }

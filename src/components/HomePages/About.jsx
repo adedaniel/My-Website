@@ -37,8 +37,8 @@ export default function About() {
                     <br />
                     I’m very passionate about building excellent software that
                     improves the lives of those around me. So I create powerful
-                    software for clients ranging from your friendly neighbour all the way to large
-                    corporations.
+                    software for clients ranging from your friendly neighbour
+                    all the way to large corporations.
                     <br />
                     <br />
                     When I'm not smacking a keyboard, you can bet I'm either
@@ -46,7 +46,18 @@ export default function About() {
                     with my family.
                     <br />
                     <br />
-                    You can also check out my CV <OutboundLink href="https://drive.google.com/file/d/1jamgoLP7gDvO2IF9bH0vf9d2WzcOe0mA/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='text-decoration-none'> <span className="hoverSmallEffect"><strong>here</strong></span></OutboundLink>
+                    You can also check out my CV{" "}
+                    <OutboundLink
+                      href="https://docs.google.com/document/d/1dnTDF_1JQ27rm0UvyqWGqBHHNTXP8we0pcY-b16kzQg/edit?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-decoration-none"
+                    >
+                      {" "}
+                      <span className="hoverSmallEffect">
+                        <strong>here</strong>
+                      </span>
+                    </OutboundLink>
                   </p>
                 </div>
               </div>
