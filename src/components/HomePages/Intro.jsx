@@ -5,56 +5,41 @@ import Button from "../button"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import BGImageBackground from "../ImageExports/BGImageBackground"
 import BGImageDarkBackground from "../ImageExports/BGImageDarkBackground"
-import MyContext from "../Context";
+import MyContext from "../Context"
 
 export default function Intro({ queryData }) {
-  const { theme } = useContext(MyContext);
+  const { theme } = useContext(MyContext)
   return (
     <>
-      <div className='bgColor'>
-        <div className='w-100 backgroundCover'>
-
-
-          {theme === 'dark' ? (
+      <div className="bgColor">
+        <div className="w-100 backgroundCover">
+          {theme === "dark" ? (
             <BGImageDarkBackground>
               <div>
                 <div className=" w-100">
-                  <div className=" bg-vh100 d-table-cell vAlign ">
-
-                  </div>
-
+                  <div className=" bg-vh100 d-table-cell vAlign "></div>
                 </div>
                 <div></div>
               </div>
-
             </BGImageDarkBackground>
-
           ) : (
-              <BGImageBackground>
-                <div>
-                  <div className=" w-100">
-                    <div className=" bg-vh100 d-table-cell vAlign ">
-
-                    </div>
-
-                  </div>
-                  <div></div>
+            <BGImageBackground>
+              <div>
+                <div className=" w-100">
+                  <div className=" bg-vh100 d-table-cell vAlign "></div>
                 </div>
-
-              </BGImageBackground>
-
-            )
-          }
-
+                <div></div>
+              </div>
+            </BGImageBackground>
+          )}
         </div>
       </div>
-      <div className='overLay'>
+      <div className="overLay">
         <div className=" w-100" id="home">
           <div className=" vh100 d-table-cell vAlign ">
             <div className="container captions">
               <div className="typeWrapper">
                 <h1 className="textColor fontTwo">
-
                   <strong className="font-weight-bold">
                     <span className=" biggerText">
                       <Typed
@@ -78,7 +63,12 @@ export default function Intro({ queryData }) {
               </div>
               <hr className="m-0" />
               <div className="contacts">
-                <OutboundLink className='text-decoration-none' target="_blank" rel="noopener noreferrer" href={queryData.twitter}>
+                <OutboundLink
+                  className="text-decoration-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={queryData.twitter}
+                >
                   <div className="eachLink d-inline-block">
                     <div className="innerTwitterLink">
                       <div className="hoverIcon">
@@ -93,7 +83,11 @@ export default function Intro({ queryData }) {
                     </div>
                   </div>
                 </OutboundLink>
-                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.linkedin}>
+                <OutboundLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={queryData.linkedin}
+                >
                   <div className="eachLink d-inline-block">
                     <div className="innerLinkedInLink">
                       <div className="hoverIcon">
@@ -108,7 +102,11 @@ export default function Intro({ queryData }) {
                     </div>
                   </div>
                 </OutboundLink>
-                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.youtube}>
+                <OutboundLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={queryData.youtube}
+                >
                   <div className="eachLink d-inline-block">
                     <div className="innerYouTubeLink">
                       <div className="hoverIcon">
@@ -123,7 +121,11 @@ export default function Intro({ queryData }) {
                     </div>
                   </div>
                 </OutboundLink>
-                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.github}>
+                <OutboundLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={queryData.github}
+                >
                   <div className="eachLink d-inline-block">
                     <div className="innerGithubLink">
                       <div className="hoverIcon">
@@ -138,7 +140,11 @@ export default function Intro({ queryData }) {
                     </div>
                   </div>
                 </OutboundLink>
-                <OutboundLink target="_blank" rel="noopener noreferrer" href={queryData.whatsapp}>
+                <OutboundLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={queryData.whatsapp}
+                >
                   <div className="eachLink d-inline-block">
                     <div className="innerWhatsappLink">
                       <div className="hoverIcon">
@@ -155,16 +161,15 @@ export default function Intro({ queryData }) {
                 </OutboundLink>
               </div>
               <OutboundLink href={`mailto:${queryData.email}`}>
-                <Button text='Get in Touch' radius='40px'
-                  width='260px'
-                  margin='10px 0'
-                  height='55px' />
-
+                <Button
+                  text="Get in Touch"
+                  radius="40px"
+                  width="260px"
+                  margin="10px 0"
+                  height="55px"
+                />
               </OutboundLink>
-
-
             </div>
-
           </div>
           <div className="text-center arrow w-100">
             <div className="animated infinite bounce slow">
@@ -176,19 +181,19 @@ export default function Intro({ queryData }) {
       </div>
 
       <style jsx>{`
-      .overLay{
-        margin-top: -93.6vh;
-        position: absolute
-      }
-      .backgroundCover{
-        opacity: 0.05
-      }
-      .typeWrapper{
-        height: 150px
-      }
-      .arrow{
-        height: 70px
-      }
+        .overLay {
+          margin-top: -93.6vh;
+          position: absolute;
+        }
+        .backgroundCover {
+          opacity: 0.05;
+        }
+        .typeWrapper {
+          height: 150px;
+        }
+        .arrow {
+          height: 70px;
+        }
         .angles {
           color: ${colors.primary};
           font-size: 40px;
@@ -284,7 +289,7 @@ export default function Intro({ queryData }) {
         .bg-vh100 {
           height: calc(95vh - 7px);
         }
-        
+
         .captions {
           width: calc(100vw - 0px);
         }
@@ -308,7 +313,7 @@ export default function Intro({ queryData }) {
           .bg-vh100 {
             height: calc(100vh - 0px);
           }
-          .overLay{
+          .overLay {
             margin-top: -101.6vh;
           }
           .captions {
@@ -319,19 +324,19 @@ export default function Intro({ queryData }) {
           .vAlign {
             width: 100vw;
           }
-          .typeWrapper{
-            height: 140px
+          .typeWrapper {
+            height: 140px;
           }
         }
         @media (max-width: 767px) {
           .fontTwo {
             font-size: 5vh;
           }
-          .typeWrapper{
-            height: 86px
+          .typeWrapper {
+            height: 86px;
           }
         }
-       
+
         .textColor {
           color: var(--inverseNeutral);
         }
@@ -363,7 +368,6 @@ export default function Intro({ queryData }) {
           color: var(--inverseNeutral);
         }
       `}</style>
-
     </>
   )
 }
