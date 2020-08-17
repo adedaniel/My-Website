@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import HNYMainImage from "../ImageExports/HNYMainImage"
 import HNY1Image from "../ImageExports/HNY1Image"
 import HNY2Image from "../ImageExports/HNY2Image"
@@ -49,9 +49,9 @@ export default function Portfolio() {
           </div>
           {data.allMarkdownRemark.edges.map(project => (
             <div key={project.node.id} className="eachProjectList my-5">
-              <a
+              <Link
                 className="text-decoration-none"
-                href={project.node.frontmatter.path}
+                to={project.node.frontmatter.path}
               >
                 <div className="container my-5">
                   <div className="row text-left portfolioWrapper py5 pl5 bgPrimaryGrey">
@@ -170,7 +170,7 @@ export default function Portfolio() {
                     )}
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           ))}
           <div className="container text-left extra  mt-5">

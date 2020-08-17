@@ -5,19 +5,25 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { colors } from "./styles/styles"
 import Menubar from "./menubar"
 import "./layout.css"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { Provider } from "../components/Context"
+import PreloadAnimation from "./PreloadAnimation"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showPreloader }) => {
   const setToggle = (theme, toggleTheme) => {
     theme === "light" ? toggleTheme("dark") : toggleTheme("light")
   }
-
+  const [showPreload, setShowPreload] = useState(showPreloader)
+  useEffect(() => {
+    setTimeout(() => {
+      setShowPreload(false)
+    }, 9000)
+  }, [])
   return (
     <>
       <ThemeToggler>
@@ -29,10 +35,16 @@ const Layout = ({ children }) => {
                 setToggle: () => setToggle(theme, toggleTheme),
               }}
             >
-              <Menubar />
-              <div className="content">
-                <main>{children}</main>
-              </div>
+              {showPreload ? (
+                <PreloadAnimation />
+              ) : (
+                <>
+                  <Menubar />
+                  <div className="content">
+                    <main>{children}</main>
+                  </div>
+                </>
+              )}
             </Provider>
           </>
         )}

@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import InexistingPage from "../components/404Page"
 
 const NotFoundPage = () => (
-  <Layout>
+  <Layout showPreloader={false}>
     <SEO title="Uh oh" />
     <InexistingPage />
   </Layout>

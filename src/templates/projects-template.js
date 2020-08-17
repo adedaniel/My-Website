@@ -8,13 +8,14 @@ export default function Template({ data }) {
   const projects = data.markdownRemark
   return (
     <>
-      <Layout>
+      <Layout showPreloader={false}>
         <SEO title="Projects" />
-        <ProjectDetails html={projects.html} frontmatter={projects.frontmatter} />
+        <ProjectDetails
+          html={projects.html}
+          frontmatter={projects.frontmatter}
+        />
       </Layout>
-
     </>
-
   )
 }
 
@@ -23,12 +24,12 @@ export const postQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-              path 
-              date 
-              title 
-              category 
-              link
-              code
+        path
+        date
+        title
+        category
+        link
+        code
       }
     }
   }

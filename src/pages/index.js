@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout showPreloader={true}>
     <SEO title="Hello ✌🏽" />
     <Homepage />
   </Layout>
