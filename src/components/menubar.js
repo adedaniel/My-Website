@@ -1,15 +1,13 @@
 import PropTypes from "prop-types"
-import React, { useState, useEffect, useContext } from "react"
+import React, { useState, useEffect, useContext, memo } from "react"
 import { colors } from "./styles/styles"
-import Scrollspy from 'react-scrollspy'
+import Scrollspy from "react-scrollspy"
 import LogoImage from "./ImageExports/LogoImage"
-import MyContext from "./Context";
-
+import MyContext from "./Context"
 
 function Menubar() {
   const [topClass, setTopClass] = useState("")
-  const { theme, setToggle } = useContext(MyContext);
-
+  const { theme, setToggle } = useContext(MyContext)
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -46,87 +44,99 @@ function Menubar() {
                   <div>
                     <LogoImage />
                     <hr className=" mt-4" />
-                    <Scrollspy style={{ padding: 0, margin: '20px 0px 10px 0px' }} offset={-300} items={['home', 'is', 'does', 'uses', 'made', 'worked-with', 'is-waiting']} currentClassName="active">
-
-
-                      <li
-                        className={`mobileSidebarList inactive`}
-                      >
-                        <a onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }} href="/#home">
+                    <Scrollspy
+                      style={{ padding: 0, margin: "20px 0px 10px 0px" }}
+                      offset={-300}
+                      items={[
+                        "home",
+                        "is",
+                        "does",
+                        "uses",
+                        "made",
+                        "worked-with",
+                        "is-waiting",
+                      ]}
+                      currentClassName="active"
+                    >
+                      <li className={`mobileSidebarList inactive`}>
+                        <a
+                          onClick={() => {
+                            document.getElementById("toggler").checked = false
+                          }}
+                          href="/#home"
+                        >
                           <h5>
                             <strong>HOME</strong>
                           </h5>
                         </a>
                       </li>
-                      <li
-                        className={`mobileSidebarList inactive`}
-
-                      >
-                        <a onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }} href="/#is">
+                      <li className={`mobileSidebarList inactive`}>
+                        <a
+                          onClick={() => {
+                            document.getElementById("toggler").checked = false
+                          }}
+                          href="/#is"
+                        >
                           <h5>
                             <strong>ABOUT</strong>
                           </h5>
                         </a>
                       </li>
-                      <li
-                        className={`mobileSidebarList inactive`}
-
-                      >
-                        <a onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }} href="/#does">
+                      <li className={`mobileSidebarList inactive`}>
+                        <a
+                          onClick={() => {
+                            document.getElementById("toggler").checked = false
+                          }}
+                          href="/#does"
+                        >
                           <h5>
                             <strong>SERVICES</strong>
                           </h5>
                         </a>
                       </li>
-                      <li
-                        className={`mobileSidebarList inactive`}
-
-                      >
-                        <a onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }} href="/#uses">
+                      <li className={`mobileSidebarList inactive`}>
+                        <a
+                          onClick={() => {
+                            document.getElementById("toggler").checked = false
+                          }}
+                          href="/#uses"
+                        >
                           <h5>
                             <strong>TECHNOLOGIES</strong>
                           </h5>
                         </a>
                       </li>
-                      <li
-                        className={`mobileSidebarList inactive`}
-
-                      >
-                        <a onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }} href="/#made">
+                      <li className={`mobileSidebarList inactive`}>
+                        <a
+                          onClick={() => {
+                            document.getElementById("toggler").checked = false
+                          }}
+                          href="/#made"
+                        >
                           <h5>
                             <strong>PROJECTS</strong>
                           </h5>
                         </a>
                       </li>
-                      <li
-                        className={`mobileSidebarList inactive`}
-
-                      >
-                        <a onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }} href="/#worked-with">
+                      <li className={`mobileSidebarList inactive`}>
+                        <a
+                          onClick={() => {
+                            document.getElementById("toggler").checked = false
+                          }}
+                          href="/#worked-with"
+                        >
                           <h5>
                             <strong>CLIENTS</strong>
                           </h5>
                         </a>
                       </li>
-                      <li
-                        className={`mobileSidebarList`}
-
-                      >
-                        <a onClick={() => {
-                          document.getElementById("toggler").checked = false
-                        }} href="/#is-waiting">
+                      <li className={`mobileSidebarList`}>
+                        <a
+                          onClick={() => {
+                            document.getElementById("toggler").checked = false
+                          }}
+                          href="/#is-waiting"
+                        >
                           <h5>
                             <strong>CONTACT</strong>
                           </h5>
@@ -135,28 +145,23 @@ function Menubar() {
                       <hr className="lineGrey" />
                       <h5 className="textGrey">
                         Theme &nbsp;&nbsp;
-                        
-                            <button
-                              className="darkModeToggler bgColor"
-                              onClick={() => setToggle()}
-                            >
-                              {theme === "light" ? (
-                                <i
-                                  className="fa fa-sun-o textGrey"
-                                  aria-hidden="true"
-                                ></i>
-                              ) : (
-                                  <i
-                                    className="fa fa-moon-o text-white"
-                                    aria-hidden="true"
-                                  ></i>
-                                )}
-                            </button>
-                         
+                        <button
+                          className="darkModeToggler bgColor"
+                          onClick={() => setToggle()}
+                        >
+                          {theme === "light" ? (
+                            <i
+                              className="fa fa-sun-o textGrey"
+                              aria-hidden="true"
+                            ></i>
+                          ) : (
+                            <i
+                              className="fa fa-moon-o text-white"
+                              aria-hidden="true"
+                            ></i>
+                          )}
+                        </button>
                       </h5>
-
-
-
                     </Scrollspy>
                   </div>
                 </div>
@@ -166,45 +171,50 @@ function Menubar() {
         }
       </div>
 
-      <div className="vh-100 sidebar bgPrimary" id="menu" >
+      <div className="vh-100 sidebar bgPrimary" id="menu">
         <LogoImage />
         <h6 className="my-4 textdarkTextGrey">
-          Web Developer <br />
+          Frontend Engineer <br />
           Keyboardist <br />
           Engineering Student <br />
         </h6>
         <hr className="lineGrey" />
-        <Scrollspy style={{ padding: 0, margin: '30px 0' }} offset={-300} items={['home', 'is', 'does', 'uses', 'made', 'worked-with', 'is-waiting']} currentClassName="active">
-          <li
-            className={`sidebarList inactive `}
-          >
+        <Scrollspy
+          style={{ padding: 0, margin: "30px 0" }}
+          offset={-300}
+          items={[
+            "home",
+            "is",
+            "does",
+            "uses",
+            "made",
+            "worked-with",
+            "is-waiting",
+          ]}
+          currentClassName="active"
+        >
+          <li className={`sidebarList inactive `}>
             <a href="/#home">
               <h5>
                 <strong>HOME</strong>
               </h5>
             </a>
           </li>
-          <li
-            className={`sidebarList inactive `}
-          >
+          <li className={`sidebarList inactive `}>
             <a href="/#is">
               <h5>
                 <strong>ABOUT</strong>
               </h5>
             </a>
           </li>
-          <li
-            className={`sidebarList inactive `}
-          >
+          <li className={`sidebarList inactive `}>
             <a href="/#does">
               <h5>
                 <strong>SERVICES</strong>
               </h5>
             </a>
           </li>
-          <li
-            className={`sidebarList inactive `}
-          >
+          <li className={`sidebarList inactive `}>
             <a href="/#uses">
               <h5>
                 <strong>TECHNOLOGIES</strong>
@@ -212,64 +222,46 @@ function Menubar() {
             </a>
           </li>
 
-          <li
-            className={`sidebarList inactive `}
-          >
+          <li className={`sidebarList inactive `}>
             <a href="/#made">
               <h5>
                 <strong>PORTFOLIO</strong>
               </h5>
             </a>
           </li>
-          <li
-            className={`sidebarList inactive `}
-          >
+          <li className={`sidebarList inactive `}>
             <a href="/#worked-with">
               <h5>
                 <strong>CLIENTS</strong>
               </h5>
             </a>
           </li>
-          <li
-            className={`sidebarList inactive `}
-          >
+          <li className={`sidebarList inactive `}>
             <a href="/#is-waiting">
               <h5>
                 <strong>CONTACT</strong>
               </h5>
             </a>
           </li>
-
         </Scrollspy>
 
         <hr className="lineGrey" />
         <h5 className="textGrey">
           Theme &nbsp;&nbsp;
-      
-            <button
-                  className="darkModeToggler bgColor"
-                  onClick={() => setToggle()}
-                >
-                  {theme === "light" ? (
-                    <i
-                      className="fa fa-sun-o textGrey"
-                      aria-hidden="true"
-                    ></i>
-                  ) : (
-                      <i
-                        className="fa fa-moon-o text-white"
-                        aria-hidden="true"
-                      ></i>
-                    )}
-                </button>
-              
-          
+          <button
+            className="darkModeToggler bgColor"
+            onClick={() => setToggle()}
+          >
+            {theme === "light" ? (
+              <i className="fa fa-sun-o textGrey" aria-hidden="true"></i>
+            ) : (
+              <i className="fa fa-moon-o text-white" aria-hidden="true"></i>
+            )}
+          </button>
         </h5>
 
-
         <small className="textdarkTextGrey">
-          For business or casual chatter, email me at
-          adetoladaniel693@gmail.com.
+          Hey! Let's chat. Email me at adetoladaniel693@gmail.com.
         </small>
       </div>
       <style jsx>
@@ -483,7 +475,7 @@ function Menubar() {
             border-bottom: 2px solid ${colors.primary} !important; /* This creates the border. Replace black with whatever color you want. */
             transition: all 0.7s !important;
           }
-.sidebarList.active::after {
+          .sidebarList.active::after {
             content: ""; /* This is necessary for the pseudo element to work. */
             display: block; /* This will put the pseudo element on its own line. */
             width: fit-content !important; /* Change this to whatever width you want. */
@@ -491,8 +483,6 @@ function Menubar() {
             border-bottom: none !important; /* This creates the border. Replace black with whatever color you want. */
             transition: all 0.7s;
           }
-
-
 
           .mobileSidebarList {
             width: fit-content;
@@ -601,4 +591,4 @@ Menubar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Menubar
+export default memo(Menubar)

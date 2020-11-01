@@ -29,10 +29,9 @@ export default function About() {
                     <br />
                     Hi, my name is Adetola Daniel. <br />
                     <br />
-                    I'm basically a really creative, fun and talented guy. I'm
-                    also an expert front-end web developer who's really good in
-                    React, Next, Gatsby and Vanilla JS as well. I've been coding
-                    for 4 years now.
+                    I'm basically a really creative, fun and talented guy. I'm a
+                    frontend engineer who's really good in React, Next, Gatsby
+                    and Vanilla JS as well.
                     <br />
                     <br />
                     I’m very passionate about building excellent software that

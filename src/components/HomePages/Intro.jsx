@@ -301,6 +301,11 @@ export default function Intro({ queryData }) {
             padding: 0px 3%;
           }
         }
+        @media (min-width: 1440px) {
+          .fontTwo {
+            font-size: 7vh !important;
+          }
+        }
         @media (min-width: 768px) and (max-width: 1068px) {
           .fontTwo {
             font-size: 8vh;

@@ -7,23 +7,28 @@ link: "https://basemailer.com"
 code: "basemailer"
 ---
 
-> ### Give your emails superpowers...🚀
+### Give your emails superpowers...🚀
 
  <br/>
     
-#### Basemailer is a modern emailing platform that allows you to send single and bulk emails, create mailing lists and get realtime email conversion analytics.
+ Basemailer is a modern emailing platform that allows you to send single and bulk emails, create mailing lists and get realtime email conversion analytics.
 
 <br/>
+<br/>
 
-#### It started as a friend's idea, and grew into a team
+#### It started as a friend's idea, and grew into a full service
 
 - ##### Quick mail deliveries
 
-- ##### Future support for custom HTML code and richer text editors
+- ##### Sending of custom HTML code
+
+- ##### Rich text editors for composing emails
 
 - ##### Creation and saving of mailing lists
 
-* ##### Realtime email analytics
+* ##### Powerful, Realtime email analytics
+
+* ##### Offline functionality as PWA
 
 - ##### Simple and beautiful UI
 

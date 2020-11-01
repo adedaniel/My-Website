@@ -13,10 +13,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const YemiBat2Image = () => {
+const MCB1Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "yemibat-2.png" }) {
+      placeholderImage: file(relativePath: { eq: "mcb-1.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -35,4 +35,4 @@ const YemiBat2Image = () => {
   )
 }
 
-export default YemiBat2Image
+export default MCB1Image

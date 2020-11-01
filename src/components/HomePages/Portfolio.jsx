@@ -9,9 +9,6 @@ import Corvs1Image from "../ImageExports/Corvs1Image"
 import Portfolio2Image from "../ImageExports/Portfolio2Image"
 import PortfolioMainImage from "../ImageExports/PortfolioMainImage"
 import Portfolio1Image from "../ImageExports/Portfolio1Image"
-import YemiBat2Image from "../ImageExports/YemiBat2Image"
-import YemiBatMainImage from "../ImageExports/YemiBatMainImage"
-import YemiBat1Image from "../ImageExports/YemiBat1Image"
 import Basemailer2Image from "../ImageExports/Basemailer2Image"
 import BasemailerMainImage from "../ImageExports/BasemailerMainImage"
 import Basemailer1Image from "../ImageExports/Basemailer1Image"
@@ -19,6 +16,9 @@ import Basemailer1Image from "../ImageExports/Basemailer1Image"
 // import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { colors } from "../styles/styles"
+import MCB2Image from "../ImageExports/MCB2Image"
+import MCBMainImage from "../ImageExports/MCBMainImage"
+import MCB1Image from "../ImageExports/MCB1Image"
 export default function Portfolio() {
   const data = useStaticQuery(graphql`
     query {
@@ -70,6 +70,26 @@ export default function Portfolio() {
                         Details
                       </h5>
                     </div>
+
+                    {project.node.frontmatter.code === "mcb" && (
+                      <div className="col-md-8">
+                        <div className="mainImgWrapper image2">
+                          <div className="gwd-p-1miv">
+                            <MCB2Image />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper">
+                          <div className="gwd-p-1miv">
+                            <MCBMainImage />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper image1">
+                          <div className="gwd-p-1miv">
+                            <MCB1Image />
+                          </div>
+                        </div>
+                      </div>
+                    )}
 
                     {project.node.frontmatter.code === "basemailer" && (
                       <div className="col-md-8">
@@ -149,25 +169,6 @@ export default function Portfolio() {
                         </div>
                       </div>
                     )}
-                    {project.node.frontmatter.code === "yemibat" && (
-                      <div className="col-md-8">
-                        <div className="mainImgWrapper image2">
-                          <div className="gwd-p-1miv">
-                            <YemiBat2Image />
-                          </div>
-                        </div>
-                        <div className="mainImgWrapper">
-                          <div className="gwd-p-1miv">
-                            <YemiBatMainImage />
-                          </div>
-                        </div>
-                        <div className="mainImgWrapper image1">
-                          <div className="gwd-p-1miv">
-                            <YemiBat1Image />
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </Link>
@@ -175,15 +176,14 @@ export default function Portfolio() {
           ))}
           <div className="container text-left extra  mt-5">
             <h5 className="text-left inverseNeutral">
-              I have also worked on a bitcoin rate converter, an online event
-              ticketing system, school and property management platforms, a
-              roboadvisor for a popular investment company, a modern payment
-              gateway application, an election prediction system among many
-              others I may not be able to showcase here cos, yunno, they're not
-              live yet. <br />
+              These are a few of my latest projects. I have also worked on a
+              bitcoin rate converter, an online event ticketing system, school
+              and property management platforms, a roboadvisor for a popular
+              investment company, a modern payment gateway application, and an
+              election prediction system among many others. <br />
               <br />
-              Nevertheless, I'm very willing to tell you anything you need to
-              know about them if you're interested. Just reach out!
+              I'm very willing to tell you anything you need to know about my
+              works if you're interested. Do reach out!
             </h5>
           </div>
         </div>

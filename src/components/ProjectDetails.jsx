@@ -9,14 +9,16 @@ import Corvs1Image from "./ImageExports/Corvs1Image"
 import Portfolio2Image from "./ImageExports/Portfolio2Image"
 import PortfolioMainImage from "./ImageExports/PortfolioMainImage"
 import Portfolio1Image from "./ImageExports/Portfolio1Image"
-import YemiBat2Image from "./ImageExports/YemiBat2Image"
-import YemiBatMainImage from "./ImageExports/YemiBatMainImage"
-import YemiBat1Image from "./ImageExports/YemiBat1Image"
 import Basemailer2Image from "./ImageExports/Basemailer2Image"
 import BasemailerMainImage from "./ImageExports/BasemailerMainImage"
 import Basemailer1Image from "./ImageExports/Basemailer1Image"
+import MCB2Image from "./ImageExports/MCB2Image"
+import MCBMainImage from "./ImageExports/MCBMainImage"
+import MCB1Image from "./ImageExports/MCB1Image"
+
 import Button from "./button"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { Link } from "gatsby"
 
 export default function ProjectDetails({ html, frontmatter }) {
   return (
@@ -59,6 +61,26 @@ export default function ProjectDetails({ html, frontmatter }) {
                   </div>
                   <div className="col-md-8 d-table captionParent hImage">
                     <div className="captionArea">
+                      {frontmatter.code === "mcb" && (
+                        <div className="captionArea">
+                          <div className="mainImgWrapper image2">
+                            <div className="gwd-p-1miv">
+                              <MCB2Image />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper">
+                            <div className="gwd-p-1miv">
+                              <MCBMainImage />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper image1">
+                            <div className="gwd-p-1miv">
+                              <MCB1Image />
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       {frontmatter.code === "basemailer" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
@@ -137,26 +159,6 @@ export default function ProjectDetails({ html, frontmatter }) {
                           </div>
                         </div>
                       )}
-
-                      {frontmatter.code === "yemibat" && (
-                        <div className="captionArea">
-                          <div className="mainImgWrapper image2">
-                            <div className="gwd-p-1miv">
-                              <YemiBat2Image />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper">
-                            <div className="gwd-p-1miv">
-                              <YemiBatMainImage />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper image1">
-                            <div className="gwd-p-1miv">
-                              <YemiBat1Image />
-                            </div>
-                          </div>
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -169,11 +171,11 @@ export default function ProjectDetails({ html, frontmatter }) {
         <div className="container">
           <div className="invNeutral details">
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <a className="text-decoration-none" href="/#made">
+            <Link className="text-decoration-none" to="/#made">
               <h5 className="invNeutral text-center my-5">
                 <span className="hoverEffect">View other projects</span>
               </h5>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

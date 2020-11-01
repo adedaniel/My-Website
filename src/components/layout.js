@@ -5,50 +5,21 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import { colors } from "./styles/styles"
-import Menubar from "./menubar"
+import React from "react"
 import "./layout.css"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { Provider } from "../components/Context"
-import PreloadAnimation from "./PreloadAnimation"
+import Menubar from "./menubar"
+import { colors } from "./styles/styles"
 
-const Layout = ({ children, showPreloader }) => {
-  const setToggle = (theme, toggleTheme) => {
-    theme === "light" ? toggleTheme("dark") : toggleTheme("light")
-  }
-  const [showPreload, setShowPreload] = useState(showPreloader)
-  useEffect(() => {
-    setTimeout(() => {
-      setShowPreload(false)
-    }, 9000)
-  }, [])
+const Layout = ({ children }) => {
   return (
     <>
-      <ThemeToggler>
-        {({ theme, toggleTheme }) => (
-          <>
-            <Provider
-              value={{
-                theme: theme,
-                setToggle: () => setToggle(theme, toggleTheme),
-              }}
-            >
-              {showPreload ? (
-                <PreloadAnimation />
-              ) : (
-                <>
-                  <Menubar />
-                  <div className="content">
-                    <main>{children}</main>
-                  </div>
-                </>
-              )}
-            </Provider>
-          </>
-        )}
-      </ThemeToggler>
+      <>
+        <Menubar />
+        <div className="content">
+          <main>{children}</main>
+        </div>
+      </>
 
       <style jsx>{`
         @media (max-width: 991px) {
