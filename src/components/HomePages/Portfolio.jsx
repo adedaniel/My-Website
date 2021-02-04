@@ -12,6 +12,9 @@ import Portfolio1Image from "../ImageExports/Portfolio1Image"
 import Basemailer2Image from "../ImageExports/Basemailer2Image"
 import BasemailerMainImage from "../ImageExports/BasemailerMainImage"
 import Basemailer1Image from "../ImageExports/Basemailer1Image"
+import Paypool2Image from "../ImageExports/Paypool2Image"
+import PaypoolMainImage from "../ImageExports/PaypoolMainImage"
+import Paypool1Image from "../ImageExports/Paypool1Image"
 
 // import AniLink from "gatsby-plugin-transition-link/AniLink";
 
@@ -106,6 +109,26 @@ export default function Portfolio() {
                         <div className="mainImgWrapper image1">
                           <div className="gwd-p-1miv">
                             <Basemailer1Image />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {project.node.frontmatter.code === "paypool" && (
+                      <div className="col-md-8">
+                        <div className="mainImgWrapper image2">
+                          <div className="gwd-p-1miv">
+                            <Paypool2Image />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper">
+                          <div className="gwd-p-1miv">
+                            <PaypoolMainImage />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper image1">
+                          <div className="gwd-p-1miv">
+                            <Paypool1Image />
                           </div>
                         </div>
                       </div>

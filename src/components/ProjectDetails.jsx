@@ -15,6 +15,9 @@ import Basemailer1Image from "./ImageExports/Basemailer1Image"
 import MCB2Image from "./ImageExports/MCB2Image"
 import MCBMainImage from "./ImageExports/MCBMainImage"
 import MCB1Image from "./ImageExports/MCB1Image"
+import Paypool2Image from "./ImageExports/Paypool2Image"
+import PaypoolMainImage from "./ImageExports/PaypoolMainImage"
+import Paypool1Image from "./ImageExports/Paypool1Image"
 
 import Button from "./button"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
@@ -96,6 +99,26 @@ export default function ProjectDetails({ html, frontmatter }) {
                           <div className="mainImgWrapper image1">
                             <div className="gwd-p-1miv">
                               <Basemailer1Image />
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {frontmatter.code === "paypool" && (
+                        <div className="captionArea">
+                          <div className="mainImgWrapper image2">
+                            <div className="gwd-p-1miv">
+                              <Paypool2Image />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper">
+                            <div className="gwd-p-1miv">
+                              <PaypoolMainImage />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper image1">
+                            <div className="gwd-p-1miv">
+                              <Paypool1Image />
                             </div>
                           </div>
                         </div>
