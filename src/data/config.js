@@ -13,7 +13,7 @@ module.exports = {
     instagram: "https://instagram.com/king_dannyel",
     youtube: "https://www.youtube.com/channel/UCRCo2e9bgFG59L3ogKZnQEg",
     facebook: "https://www.facebook.com/daniel.adetola.3",
-    whatsapp: "https://wa.me/2348104172477"
+    whatsapp: "https://wa.me/2348104172477",
   },
   googleAnalyticsID: "UA-163859000-1",
   themeColor: "#61dafb",
@@ -33,5 +33,4 @@ module.exports = {
     phone: "+234 (81) 0417 2477",
   },
   foundingDate: "2020",
-  // recaptcha_key: "6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TU3efpMN",
 }

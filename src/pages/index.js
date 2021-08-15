@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout showPreloader={true}>
-    <SEO title="Hello ✌🏽" />
+    <SEO title="Hello 👋🏽" />
     <Homepage />
   </Layout>
 )

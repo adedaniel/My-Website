@@ -18,6 +18,9 @@ import MCB1Image from "./ImageExports/MCB1Image"
 import Paypool2Image from "./ImageExports/Paypool2Image"
 import PaypoolMainImage from "./ImageExports/PaypoolMainImage"
 import Paypool1Image from "./ImageExports/Paypool1Image"
+import Swapbase2Image from "./ImageExports/Swapbase2Image"
+import SwapbaseMainImage from "./ImageExports/SwapbaseMainImage"
+import Swapbase1Image from "./ImageExports/Swapbase1Image"
 
 import Button from "./button"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
@@ -119,6 +122,26 @@ export default function ProjectDetails({ html, frontmatter }) {
                           <div className="mainImgWrapper image1">
                             <div className="gwd-p-1miv">
                               <Paypool1Image />
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {frontmatter.code === "swapbase" && (
+                        <div className="captionArea">
+                          <div className="mainImgWrapper image2">
+                            <div className="gwd-p-1miv">
+                              <Swapbase2Image />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper">
+                            <div className="gwd-p-1miv">
+                              <SwapbaseMainImage />
+                            </div>
+                          </div>
+                          <div className="mainImgWrapper image1">
+                            <div className="gwd-p-1miv">
+                              <Swapbase1Image />
                             </div>
                           </div>
                         </div>

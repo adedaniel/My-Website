@@ -34,7 +34,7 @@ export default function Clients() {
                 <div className="d-table hImage captionParent">
                   <div className="captionArea captionPadding">
                     <h1 className="clientsCaption">
-                      Some of the people I've worked with...
+                      Some of the awesome people I've worked with...
                     </h1>
                   </div>
                 </div>

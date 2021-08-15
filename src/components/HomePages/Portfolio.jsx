@@ -15,6 +15,9 @@ import Basemailer1Image from "../ImageExports/Basemailer1Image"
 import Paypool2Image from "../ImageExports/Paypool2Image"
 import PaypoolMainImage from "../ImageExports/PaypoolMainImage"
 import Paypool1Image from "../ImageExports/Paypool1Image"
+import Swapbase2Image from "../ImageExports/Swapbase2Image"
+import SwapbaseMainImage from "../ImageExports/SwapbaseMainImage"
+import Swapbase1Image from "../ImageExports/Swapbase1Image"
 
 // import AniLink from "gatsby-plugin-transition-link/AniLink";
 
@@ -22,6 +25,7 @@ import { colors } from "../styles/styles"
 import MCB2Image from "../ImageExports/MCB2Image"
 import MCBMainImage from "../ImageExports/MCBMainImage"
 import MCB1Image from "../ImageExports/MCB1Image"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 export default function Portfolio() {
   const data = useStaticQuery(graphql`
     query {
@@ -134,6 +138,26 @@ export default function Portfolio() {
                       </div>
                     )}
 
+                    {project.node.frontmatter.code === "swapbase" && (
+                      <div className="col-md-8">
+                        <div className="mainImgWrapper image2">
+                          <div className="gwd-p-1miv">
+                            <Swapbase2Image />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper">
+                          <div className="gwd-p-1miv">
+                            <SwapbaseMainImage />
+                          </div>
+                        </div>
+                        <div className="mainImgWrapper image1">
+                          <div className="gwd-p-1miv">
+                            <Swapbase1Image />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
                     {project.node.frontmatter.code === "hny" && (
                       <div className="col-md-8">
                         <div className="mainImgWrapper image2">
@@ -198,15 +222,66 @@ export default function Portfolio() {
             </div>
           ))}
           <div className="container text-left extra  mt-5">
+            <h5 className="text-left inverseNeutral"></h5>
             <h5 className="text-left inverseNeutral">
-              These are a few of my latest projects. I have also worked on a
-              bitcoin rate converter, an online event ticketing system, school
-              and property management platforms, a roboadvisor for a popular
-              investment company, a modern payment gateway application, and an
-              election prediction system among many others. <br />
+              I've also got some personal projects where I put into action some
+              of the things I have recently learned:
+              <br />-{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/adedaniel/graphql-apollo-shopping-cart"
+              >
+                GraphQL-Apollo Shopping Cart
+              </a>
+              <br />-{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/adedaniel/Next.js-Firebase-Boilerplate"
+              >
+                Next.js & Firebase/Firestore Boilerplate
+              </a>
+              <br />-{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/adedaniel/currency-exchange-app"
+              >
+                Currency exchange app with Typescript and Tailwind CSS
+              </a>
+              <br />-{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/adedaniel/formik-yup-signup-form"
+              >
+                Simple signup form using Formik and Yup validation
+              </a>
+              <br />-{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/adedaniel/react-native-music-player"
+              >
+                React Native Music Player
+              </a>
               <br />
+              <br />{" "}
+              <OutboundLink
+                href="https://github.com/adedaniel?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+              >
+                <span className="hoverSmallEffect">
+                  <strong>And a lot more here.</strong>
+                </span>
+              </OutboundLink>
+            </h5>
+            <h5 className="text-left inverseNeutral">
               I'm very willing to tell you anything you need to know about my
-              works if you're interested. Do reach out!
+              works. Do reach out!
             </h5>
           </div>
         </div>
