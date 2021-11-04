@@ -96,8 +96,8 @@ export default function Technologies() {
                     <p className="text-justify">
                       I have a vast amount of experience building websites and
                       web applications with modern frameworks such as Vanilla
-                      JS, jQuery, React, Redux (Toolkit), Electron, React
-                      Native, Typescript, Next JS for server side rendering, and
+                      JS, jQuery, React, Redux, Electron, React Native,
+                      Typescript, Next JS for server side rendering, and
                       JAMstack with Gatsby JS
                     </p>
                   </div>

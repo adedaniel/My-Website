@@ -3,7 +3,7 @@ path: "/made/portfolio-website"
 date: "April 2020"
 title: "Portfolio Website"
 category: "Programming"
-link: "https://adedaniel.netlify.com"
+link: "https://adedaniel.com"
 code: "portfolio"
 ---
 

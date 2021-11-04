@@ -50,7 +50,7 @@ export default function Portfolio() {
     <>
       <div className="pt-1 bgColor">
         <div className="text-center py-5" id="made">
-          <h1 className="mb-1 bgGrey mt20">Projects</h1>
+          <h1 className="mb-1 bgGrey mt20">Personal Projects</h1>
           <div className="lineWrapper mb-4">
             <div className="innerLine"></div>
           </div>
@@ -443,7 +443,7 @@ export default function Portfolio() {
           background-color: var(--bg);
         }
         .lineWrapper {
-          width: 180px;
+          width: 280px;
           height: 3px;
           background: lightgray;
           margin: 0 auto;

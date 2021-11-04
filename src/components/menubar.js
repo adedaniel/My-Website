@@ -176,7 +176,7 @@ function Menubar() {
         <h6 className="my-4 textdarkTextGrey">
           Frontend Engineer <br />
           Keyboardist <br />
-          Engineering Student <br />
+          Engineer <br />
         </h6>
         <hr className="lineGrey" />
         <Scrollspy
