@@ -1,30 +1,21 @@
 import React from "react"
-import { colors } from "./styles/styles"
-import HNY2Image from "./ImageExports/HNY2Image"
-import HNYMainImage from "./ImageExports/HNYMainImage"
-import HNY1Image from "./ImageExports/HNY1Image"
-import Corvs2Image from "./ImageExports/Corvs2Image"
-import CorvsMainImage from "./ImageExports/CorvsMainImage"
-import Corvs1Image from "./ImageExports/Corvs1Image"
-import Portfolio2Image from "./ImageExports/Portfolio2Image"
-import PortfolioMainImage from "./ImageExports/PortfolioMainImage"
-import Portfolio1Image from "./ImageExports/Portfolio1Image"
-import Basemailer2Image from "./ImageExports/Basemailer2Image"
-import BasemailerMainImage from "./ImageExports/BasemailerMainImage"
-import Basemailer1Image from "./ImageExports/Basemailer1Image"
+import Emerald1Image from "./ImageExports/Emerald1Image"
+import Emerald2Image from "./ImageExports/Emerald2Image"
+import EmeraldMainImage from "./ImageExports/EmeraldMainImage"
+import MCB1Image from "./ImageExports/MCB1Image"
 import MCB2Image from "./ImageExports/MCB2Image"
 import MCBMainImage from "./ImageExports/MCBMainImage"
-import MCB1Image from "./ImageExports/MCB1Image"
+import Paypool1Image from "./ImageExports/Paypool1Image"
 import Paypool2Image from "./ImageExports/Paypool2Image"
 import PaypoolMainImage from "./ImageExports/PaypoolMainImage"
-import Paypool1Image from "./ImageExports/Paypool1Image"
+import Swapbase1Image from "./ImageExports/Swapbase1Image"
 import Swapbase2Image from "./ImageExports/Swapbase2Image"
 import SwapbaseMainImage from "./ImageExports/SwapbaseMainImage"
-import Swapbase1Image from "./ImageExports/Swapbase1Image"
+import { colors } from "./styles/styles"
 
-import Button from "./button"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import Button from "./button"
 
 export default function ProjectDetails({ html, frontmatter }) {
   return (
@@ -87,26 +78,6 @@ export default function ProjectDetails({ html, frontmatter }) {
                         </div>
                       )}
 
-                      {frontmatter.code === "basemailer" && (
-                        <div className="captionArea">
-                          <div className="mainImgWrapper image2">
-                            <div className="gwd-p-1miv">
-                              <Basemailer2Image />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper">
-                            <div className="gwd-p-1miv">
-                              <BasemailerMainImage />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper image1">
-                            <div className="gwd-p-1miv">
-                              <Basemailer1Image />
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
                       {frontmatter.code === "paypool" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
@@ -147,60 +118,21 @@ export default function ProjectDetails({ html, frontmatter }) {
                         </div>
                       )}
 
-                      {frontmatter.code === "hny" && (
+                      {frontmatter.code === "emerald" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
                             <div className="gwd-p-1miv">
-                              <HNY2Image />
+                              <Emerald2Image />
                             </div>
                           </div>
                           <div className="mainImgWrapper">
                             <div className="gwd-p-1miv">
-                              <HNYMainImage />
+                              <EmeraldMainImage />
                             </div>
                           </div>
                           <div className="mainImgWrapper image1">
                             <div className="gwd-p-1miv">
-                              <HNY1Image />
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {frontmatter.code === "portfolio" && (
-                        <div className="captionArea">
-                          <div className="mainImgWrapper image2">
-                            <div className="gwd-p-1miv">
-                              <Portfolio2Image />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper">
-                            <div className="gwd-p-1miv">
-                              <PortfolioMainImage />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper image1">
-                            <div className="gwd-p-1miv">
-                              <Portfolio1Image />
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                      {frontmatter.code === "corvs" && (
-                        <div className="captionArea">
-                          <div className="mainImgWrapper image2">
-                            <div className="gwd-p-1miv">
-                              <Corvs2Image />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper">
-                            <div className="gwd-p-1miv">
-                              <CorvsMainImage />
-                            </div>
-                          </div>
-                          <div className="mainImgWrapper image1">
-                            <div className="gwd-p-1miv">
-                              <Corvs1Image />
+                              <Emerald1Image />
                             </div>
                           </div>
                         </div>

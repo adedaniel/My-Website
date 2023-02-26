@@ -29,7 +29,7 @@ code: "mcb"
 **Product type:**  
 Mental Health, Productivity  
 **Contribution:**  
-Interaction and visual design, Frontend development  
+Interaction and visual design, Development  
 **Skills exercised:**  
 System design; React JS, Next JS, Redux, Chakra UI, Twilio, Google Firebase\
 **Engagement period:**

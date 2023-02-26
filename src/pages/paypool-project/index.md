@@ -28,7 +28,7 @@ code: "paypool"
 **Product type:**  
 Crowdfunding, Finance\
 **Contribution:**  
-Interaction and visual design, Frontend development  
+Interaction and visual design, Development  
 **Skills exercised:**  
 React JS, Next JS, Redux, Chakra UI, Paystack\
 **Engagement period:**

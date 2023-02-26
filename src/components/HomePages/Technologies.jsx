@@ -95,9 +95,9 @@ export default function Technologies() {
                     <h3 className="fontBold">JAVASCRIPT</h3>
                     <p className="text-justify">
                       I have a vast amount of experience building websites and
-                      web applications with modern frameworks such as Vanilla
-                      JS, jQuery, React, Redux, Electron, React Native,
-                      Typescript, Next JS for server side rendering, and
+                      web applications with modern frontend and backend
+                      frameworks such as React, Express, Redux, Electron, React
+                      Native, Typescript, Next JS for server side rendering, and
                       JAMstack with Gatsby JS
                     </p>
                   </div>

@@ -13,10 +13,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const PortfolioMainImage = () => {
+const Emerald1Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "portfolio-main.png" }) {
+      placeholderImage: file(relativePath: { eq: "emerald-1.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -35,4 +35,4 @@ const PortfolioMainImage = () => {
   )
 }
 
-export default PortfolioMainImage
+export default Emerald1Image

@@ -174,7 +174,7 @@ function Menubar() {
       <div className="vh-100 sidebar bgPrimary" id="menu">
         <LogoImage />
         <h6 className="my-4 textdarkTextGrey">
-          Frontend Engineer <br />
+          Lead Fullstack Engineer <br />
           Keyboardist <br />
           Engineer <br />
         </h6>
