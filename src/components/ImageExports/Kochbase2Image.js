@@ -13,10 +13,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Paypool1Image = () => {
+const Kochbase2Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "paypool-1.png" }) {
+      placeholderImage: file(relativePath: { eq: "kochbase-2.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -25,7 +25,6 @@ const Paypool1Image = () => {
       }
     }
   `)
-
   return (
     <Img
       objectFit="cover"
@@ -35,4 +34,4 @@ const Paypool1Image = () => {
   )
 }
 
-export default Paypool1Image
+export default Kochbase2Image

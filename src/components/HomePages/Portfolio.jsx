@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Paypool1Image from "../ImageExports/Paypool1Image"
-import Paypool2Image from "../ImageExports/Paypool2Image"
-import PaypoolMainImage from "../ImageExports/PaypoolMainImage"
+import Kochbase1Image from "../ImageExports/Kochbase1Image"
+import Kochbase2Image from "../ImageExports/Kochbase2Image"
+import KochbaseMainImage from "../ImageExports/KochbaseMainImage"
 import Emerald1Image from "../ImageExports/Emerald1Image"
 import Emerald2Image from "../ImageExports/Emerald2Image"
 import EmeraldMainImage from "../ImageExports/EmeraldMainImage"
@@ -89,21 +89,21 @@ export default function Portfolio() {
                       </div>
                     )}
 
-                    {project.node.frontmatter.code === "paypool" && (
+                    {project.node.frontmatter.code === "kochbase" && (
                       <div className="col-md-8">
                         <div className="mainImgWrapper image2">
                           <div className="gwd-p-1miv">
-                            <Paypool2Image />
+                            <Kochbase2Image />
                           </div>
                         </div>
                         <div className="mainImgWrapper">
                           <div className="gwd-p-1miv">
-                            <PaypoolMainImage />
+                            <KochbaseMainImage />
                           </div>
                         </div>
                         <div className="mainImgWrapper image1">
                           <div className="gwd-p-1miv">
-                            <Paypool1Image />
+                            <Kochbase1Image />
                           </div>
                         </div>
                       </div>
@@ -157,6 +157,15 @@ export default function Portfolio() {
             <h5 className="text-left inverseNeutral mt-5">
               I've also got some personal projects where I put into action some
               of the things I have recently learned:
+              <br />
+              <br />-{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/adedaniel/node-notes"
+              >
+                MERN stack app for managing notes with user authentication
+              </a>
               <br />-{" "}
               <a
                 target="_blank"
@@ -188,14 +197,6 @@ export default function Portfolio() {
                 href="https://github.com/adedaniel/formik-yup-signup-form"
               >
                 Simple signup form using Formik and Yup validation
-              </a>
-              <br />-{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/adedaniel/react-native-music-player"
-              >
-                React Native Music Player
               </a>
               <br />
               <br />{" "}

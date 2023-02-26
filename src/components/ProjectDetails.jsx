@@ -5,9 +5,9 @@ import EmeraldMainImage from "./ImageExports/EmeraldMainImage"
 import MCB1Image from "./ImageExports/MCB1Image"
 import MCB2Image from "./ImageExports/MCB2Image"
 import MCBMainImage from "./ImageExports/MCBMainImage"
-import Paypool1Image from "./ImageExports/Paypool1Image"
-import Paypool2Image from "./ImageExports/Paypool2Image"
-import PaypoolMainImage from "./ImageExports/PaypoolMainImage"
+import Kochbase1Image from "./ImageExports/Kochbase1Image"
+import Kochbase2Image from "./ImageExports/Kochbase2Image"
+import KochbaseMainImage from "./ImageExports/KochbaseMainImage"
 import Swapbase1Image from "./ImageExports/Swapbase1Image"
 import Swapbase2Image from "./ImageExports/Swapbase2Image"
 import SwapbaseMainImage from "./ImageExports/SwapbaseMainImage"
@@ -78,21 +78,21 @@ export default function ProjectDetails({ html, frontmatter }) {
                         </div>
                       )}
 
-                      {frontmatter.code === "paypool" && (
+                      {frontmatter.code === "kochbase" && (
                         <div className="captionArea">
                           <div className="mainImgWrapper image2">
                             <div className="gwd-p-1miv">
-                              <Paypool2Image />
+                              <Kochbase2Image />
                             </div>
                           </div>
                           <div className="mainImgWrapper">
                             <div className="gwd-p-1miv">
-                              <PaypoolMainImage />
+                              <KochbaseMainImage />
                             </div>
                           </div>
                           <div className="mainImgWrapper image1">
                             <div className="gwd-p-1miv">
-                              <Paypool1Image />
+                              <Kochbase1Image />
                             </div>
                           </div>
                         </div>
