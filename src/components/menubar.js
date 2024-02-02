@@ -235,6 +235,13 @@ function Menubar() {
             </a>
           </li>
           <li className={`sidebarList inactive `}>
+            <a href="https://blog.adedaniel.com">
+              <h5>
+                <strong>BLOG</strong>
+              </h5>
+            </a>
+          </li>
+          <li className={`sidebarList inactive `}>
             <a href="/#is-waiting">
               <h5>
                 <strong>CONTACT</strong>
