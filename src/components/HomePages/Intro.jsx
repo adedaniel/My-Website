@@ -44,9 +44,9 @@ export default function Intro({ queryData }) {
                     <span className=" biggerText">
                       <Typed
                         strings={[
-                          "SENIOR <br/> SOFTWARE ENGINEER",
-                          "BUILDING <br/> TOMORROW'S TECH",
-                          "I AM <br/> ADEDANIEL^5000",
+                          "SENIOR <br/> SOFTWARE <br/> ENGINEER",
+                          "BUILDING <br/> TOMORROW'S <br/> TECH",
+                          "I <br/> AM <br/> ADEDANIEL^5000",
                         ]}
                         typeSpeed={50}
                         backSpeed={30}
@@ -189,7 +189,7 @@ export default function Intro({ queryData }) {
           opacity: 0.1;
         }
         .typeWrapper {
-          height: 150px;
+          height: 250px;
         }
         .arrow {
           height: 70px;
@@ -330,7 +330,7 @@ export default function Intro({ queryData }) {
             width: 100vw;
           }
           .typeWrapper {
-            height: 140px;
+            height: 230px;
           }
         }
         @media (max-width: 767px) {
@@ -338,7 +338,7 @@ export default function Intro({ queryData }) {
             font-size: 5vh;
           }
           .typeWrapper {
-            height: 86px;
+            height: 150px;
           }
         }
 
