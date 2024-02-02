@@ -235,16 +235,16 @@ function Menubar() {
             </a>
           </li>
           <li className={`sidebarList inactive `}>
-            <a href="https://blog.adedaniel.com">
+            <a href="/#is-waiting">
               <h5>
-                <strong>BLOG</strong>
+                <strong>CONTACT</strong>
               </h5>
             </a>
           </li>
           <li className={`sidebarList inactive `}>
-            <a href="/#is-waiting">
+            <a href="https://blog.adedaniel.com">
               <h5>
-                <strong>CONTACT</strong>
+                <strong>BLOG</strong>
               </h5>
             </a>
           </li>
