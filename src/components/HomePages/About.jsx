@@ -30,8 +30,8 @@ export default function About() {
                     Hi, my name is Adetola Daniel. <br />
                     <br />
                     I'm basically a really creative, fun and talented guy. I'm a
-                    fullstack engineer who's really good in React, MERN, React
-                    Native, Next, Gatsby and Vanilla JS as well.
+                    senior fullstack engineer who's really good in React, MERN,
+                    React Native, Next, Gatsby and Vanilla JS as well.
                     <br />
                     <br />
                     I'm very passionate about building excellent software that

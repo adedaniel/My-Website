@@ -44,8 +44,8 @@ export default function Intro({ queryData }) {
                     <span className=" biggerText">
                       <Typed
                         strings={[
-                          "ENGINEER <br/> BY PROFESSION",
-                          "DEVELOPER <br/> BY PASSION",
+                          "SENIOR <br/> SOFTWARE ENGINEER",
+                          "BUILDING <br/> TOMORROW'S TECH",
                           "I AM <br/> ADEDANIEL^5000",
                         ]}
                         typeSpeed={50}
@@ -186,7 +186,7 @@ export default function Intro({ queryData }) {
           position: absolute;
         }
         .backgroundCover {
-          opacity: 0.05;
+          opacity: 0.1;
         }
         .typeWrapper {
           height: 150px;

@@ -8,7 +8,7 @@ export default function Services() {
   return (
     <div className="bgColor">
       <div className=" w-100 container py-5" id="does">
-        <div className="text-center" >
+        <div className="text-center">
           <h1 className="mb-1 bgGrey mt20">Services</h1>
           <div className="lineWrapper">
             <div className="innerLine"></div>
@@ -31,8 +31,8 @@ export default function Services() {
                 <p className="description">
                   I create fast, beautiful, cost-effective and efficient
                   websites and web applications with perfect scores in
-                  Performance, SEO and Best Practices. All web
-                  apps are built with the latest and sophisticated technologies
+                  Performance, SEO and Best Practices. All web apps are built
+                  with the latest and sophisticated technologies
                 </p>
               </div>
             </div>
@@ -51,11 +51,11 @@ export default function Services() {
               <div className="timeline-content">
                 <h5 className="title">State of the Art Solutions</h5>
                 <p className="description">
-                  It's 2020 and you and your clients should see that in your
-                  final product. This involves best practices regarding
-                  accessibility, security and usability. This
-                  results in appropriate design, secure websites and fast load
-                  times.
+                  It's {new Date().getFullYear()} and you and your clients
+                  should see that in your final product. This involves best
+                  practices regarding accessibility, security and usability.
+                  This results in appropriate design, secure websites and fast
+                  load times.
                 </p>
               </div>
             </div>
@@ -108,9 +108,9 @@ export default function Services() {
       </div>
       <style jsx>
         {`
-        .mt20{
-          margin-top: 25px
-        }
+          .mt20 {
+            margin-top: 25px;
+          }
           .iconWrapper {
             width: 60px;
             margin: 0 auto;
@@ -375,15 +375,14 @@ export default function Services() {
             .main-timeline .timeline:nth-child(1n) .timeline-content {
               padding: 20px 0px 20px 20px !important;
               text-align: left;
-          }
-          .main-timeline .timeline:nth-child(2n) .timeline-content {
-            padding: 20px 0px 20px 20px !important;
-            text-align: left;
-        }
+            }
+            .main-timeline .timeline:nth-child(2n) .timeline-content {
+              padding: 20px 0px 20px 20px !important;
+              text-align: left;
+            }
           }
         `}
       </style>
     </div>
-
   )
 }
