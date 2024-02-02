@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import MyContext from "./Context"
 import { colors } from "./styles/styles"
 
-export default function PreloadAnimation() {
+export default function PreloadAnimation({ show }) {
   const { theme } = useContext(MyContext)
 
   return (
@@ -83,72 +83,76 @@ export default function PreloadAnimation() {
             theme === "light" ? colors.white : colors.secondary
           };
           height: 100vh;
+          position: fixed;
+          z-index: 100000 !important;
+          visibility: ${show ? "visible" : "hidden"};
+          width: 100%;
         }
         .animationContainer {
-         animation: fadeOut 1s ease 8s;
-         -webkit-animation: fadeOut 1s ease 8s;
-         -moz-animation: fadeOut 1s ease 8s;
-         -o-animation: fadeOut 1s ease 8s;
-         -ms-animation: fadeOut 1s ease 8s;
-          display: flex;
-          height: 87vh;
-          align-items: center;
-          justify-content: center;
+          animation: fadeOut 2s ease 4.25s forwards;
+          -webkit-animation: fadeOut 2s ease 4.25s forwards;
+          -moz-animation: fadeOut 2s ease 4.25s forwards;
+          -o-animation: fadeOut 2s ease 4.25s forwards;
+          -ms-animation: fadeOut 2s ease 4.25s forwards;
+           display: flex;
+           height: 87vh;
+           align-items: center;
+           justify-content: center;
         }
 
         #logo {
-          animation: fill 0.8s ease forwards 4.5s;
-        }
+          animation: fill 0.8s ease forwards 3.0s;
+         }
 
         #logo path:nth-child(1) {
           stroke-dasharray: 412.3390808105469;
           stroke-dashoffset: 412.3390808105469;
-          animation: line-anim 1.2s ease forwards;
+          animation: line-anim 2s ease forwards;
         }
         #logo path:nth-child(2) {
           stroke-dasharray: 852.8212280273438;
           stroke-dashoffset: 852.8212280273438;
-          animation: line-anim 1.2s ease forwards;
+          animation: line-anim 2s ease forwards 0.2s;
         }
         #logo path:nth-child(3) {
           stroke-dasharray: 358.8932800292969;
           stroke-dashoffset: 358.8932800292969;
-          animation: line-anim 1.2s ease forwards 0.6s;
+          animation: line-anim 2s ease forwards 0.4s;
         }
         #logo path:nth-child(4) {
           stroke-dasharray: 852.821533203125;
           stroke-dashoffset: 852.821533203125;
-          animation: line-anim 1.2s ease forwards 1.2s;
+          animation: line-anim 2s ease forwards 0.6s;
         }
         #logo path:nth-child(5) {
           stroke-dasharray: 412.3398132324219;
           stroke-dashoffset: 412.3398132324219;
-          animation: line-anim 1.2s ease forwards 1.8s;
+          animation: line-anim 2s ease forwards 0.8s;
         }
         #logo path:nth-child(6) {
           stroke-dasharray: 551.572021484375;
           stroke-dashoffset: 551.572021484375;
-          animation: line-anim 1.2s ease forwards 2.4s;
+          animation: line-anim 2s ease forwards 1.0s;
         }
         #logo path:nth-child(7) {
           stroke-dasharray: 504.8756103515625;
           stroke-dashoffset: 504.8756103515625;
-          animation: line-anim 1.2s ease forwards 3s;
+          animation: line-anim 2s ease forwards 1.2s;
         }
         #logo path:nth-child(8) {
           stroke-dasharray: 358.8938293457031;
           stroke-dashoffset: 358.8938293457031;
-          animation: line-anim 1.2s ease forwards 3.6s;
+          animation: line-anim 2s ease forwards 1.4s;
         }
         #logo path:nth-child(9) {
           stroke-dasharray: 730.7367553710938;
           stroke-dashoffset: 730.7367553710938;
-          animation: line-anim 1.2s ease forwards 4.2s;
+          animation: line-anim 2s ease forwards 1.6s;
         }
         #logo path:nth-child(10) {
           stroke-dasharray: 565;
           stroke-dashoffset: 565;
-          animation: line-anim 1.2s ease forwards 4.8s;
+          animation: line-anim 2s ease forwards 1.8s;
         }
 
         @keyframes line-anim {

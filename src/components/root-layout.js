@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     setTimeout(() => {
       setShowPreload(false)
-    }, 8000)
+    }, 5000)
   }, [])
   return (
     <ThemeToggler>
@@ -23,7 +23,8 @@ export default function RootLayout({ children }) {
             setToggle: () => setToggle(theme, toggleTheme),
           }}
         >
-          {showPreload ? <PreloadAnimation /> : children}
+          <PreloadAnimation show={showPreload} />
+          {children}
         </Provider>
       )}
     </ThemeToggler>

@@ -15,7 +15,7 @@ import BackgroundImage from "gatsby-background-image"
 const BGImageDarkBackground = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "bg-dark-image.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "bg-image.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG

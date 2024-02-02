@@ -15,7 +15,7 @@ import BackgroundImage from "gatsby-background-image"
 const BGImageBackground = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "bg-dark-image.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "bg-image.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -33,7 +33,7 @@ const BGImageBackground = ({ children }) => {
       // backgroundColor={colors.transparent}
       fadeIn={`soft`}
       style={{
-        backgroundPosition: "right",
+        backgroundPosition: "right bottom",
         backgroundColor: "transparent",
         backgroundSize: "auto",
         backgroundAttachment: "fixed",
