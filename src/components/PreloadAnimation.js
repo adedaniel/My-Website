@@ -65,29 +65,30 @@ export default function PreloadAnimation({ show }) {
         </div>
       </div>
       <style jsx>{`
-      #logo {
-        width: 70%
-    }
-      @media (max-width: 767px){
         #logo {
-            width: 80%
+          width: 70%
         }
-      }
-      @media (max-width: 575px){
-        #logo {
-            width: 90%
+        @media (max-width: 767px){
+          #logo {
+              width: 80%
+          }
         }
-      }
+        @media (max-width: 575px){
+          #logo {
+              width: 90%
+          }
+        }
         .animationWrapper {
+          animation: hideAll 2s ease 6s forwards;
           background-color: ${
             theme === "light" ? colors.white : colors.secondary
           };
           height: 100vh;
           position: fixed;
           z-index: 100000 !important;
-          visibility: ${show ? "visible" : "hidden"};
           width: 100%;
         }
+      
         .animationContainer {
           animation: fadeOut 2s ease 4.25s forwards;
           -webkit-animation: fadeOut 2s ease 4.25s forwards;
@@ -169,6 +170,16 @@ export default function PreloadAnimation({ show }) {
           }
         }
 
+        @keyframes hideAll {
+          0% {
+            visibility: visible;
+            opacity: 1;
+          }
+          100% {
+            visibility: hidden;
+            opacity: 0;
+          }
+        }
 
         @keyframes fadeOut {
             0% {
