@@ -18,7 +18,7 @@ const BGImageDarkBackground = ({ children }) => {
       placeholderImage: file(relativePath: { eq: "bg-dark-image.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_tracedSVG 
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -32,13 +32,11 @@ const BGImageDarkBackground = ({ children }) => {
       fluid={data.placeholderImage.childImageSharp.fluid}
       // backgroundColor={colors.transparent}
       fadeIn={`soft`}
-
       style={{
-        backgroundPosition: "right",
-        backgroundColor: 'transparent',
-        backgroundSize: 'auto',
-        backgroundAttachment: 'fixed'
-
+        backgroundPosition: "right bottom",
+        backgroundColor: "transparent",
+        backgroundSize: "auto",
+        backgroundAttachment: "fixed",
       }}
     >
       {children}
