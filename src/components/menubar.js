@@ -551,9 +551,14 @@ function Menubar() {
             border: none;
             outline: none;
           }
+          .navbar {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+
           .navbar.past-main {
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
             /*background-color: rgba(255, 255, 255, 0.99) !important;*/
             -webkit-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.1);
             -moz-box-shadow: 0 4px 3px 0 rgba(96, 96, 96, 0.1);
