@@ -24,7 +24,7 @@
     "gatsby-plugin-styled-jsx": "^3.2.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.56",
-    "gatsby-transformer-remark": "^2.7.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.19",
     "gsap": "^3.2.6",
     "jquery": "^3.4.1",
